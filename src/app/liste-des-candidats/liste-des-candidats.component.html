@@ -1,0 +1,24 @@
+
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-03-13 -->
+
+
+<ng-container *ngFor="let candidat of candidats">
+
+  <mat-card>
+  
+    <mat-card-title>
+      <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+    </mat-card-title>
+
+    <mat-card-subtitle>
+    <dl> 
+      <dt>{{candidat.name}}</dt>
+      <dt>{{candidat.jobTitle}}</dt>
+      <dt>{{candidat.email}}</dt>
+      <dt>{{candidat.phone}}</dt>
+    </dl>
+    </mat-card-subtitle>
+</mat-card>
+</ng-container>
+
