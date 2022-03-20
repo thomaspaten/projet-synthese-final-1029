@@ -1,0 +1,71 @@
+.couleurBtn__orange {
+  background-color: orange;
+  color: white;
+}
+
+.h1__orange {
+  color: orange;
+  font-weight: bold;
+}
+
+.bg__orange {
+  background-color: orange;
+}
+
+.polColor__orange {
+  color: orange;
+}
+
+.couleurBtn__gris {
+  background-color: grey;
+  color: white;
+}
+
+.h1__gris {
+  color: grey;
+  font-weight: bold;
+}
+
+.bg__gris {
+  background-color: grey;
+}
+
+.polColor__gris {
+  color: grey;
+}
+
+.couleurBtn__blanc {
+  background-color: white;
+  color: white;
+}
+
+.h1__blanc {
+  color: white;
+  font-weight: bold;
+}
+
+.bg__blanc {
+  background-color: white;
+}
+
+.polColor__blanc {
+  color: white;
+}
+
+.couleurBtn__noir {
+  background-color: black;
+  color: white;
+}
+
+.h1__noir {
+  color: black;
+  font-weight: bold;
+}
+
+.bg__noir {
+  background-color: black;
+}
+
+.polColor__noir {
+  color: black;
+}

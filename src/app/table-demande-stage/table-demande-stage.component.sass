@@ -1,0 +1,19 @@
+// Couleur de bouton
+
+$couleurs: ("orange": orange, "gris": grey, "blanc": white, "noir": black)
+
+@each $couleur, $i in $couleurs
+    .couleurBtn__
+        &#{$couleur}
+            background-color: $i
+            color: white
+    .h1__
+        &#{$couleur}
+            color: $i
+            font-weight: bold
+    .bg__
+        &#{$couleur}
+            background-color: $i
+    .polColor__
+        &#{$couleur}
+            color: $i
