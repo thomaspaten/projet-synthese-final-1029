@@ -1,25 +1,25 @@
 <h1 class="h1__gris">Demandes de stage</h1>
 <button mat-button class="couleurBtn__orange">Ajouter une demande</button>
-<table class="bg__blanc" mat-table #tableStage [dataSource]="tableauDemandeStage">
+<table class="bg__blanc" mat-table #tableStage [dataSource]="tableauDemandeStages">
 
     <ng-container matColumnDef="title">
         <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Poste </th>
-        <td class="polColor__noir" mat-cell *matCellDef="let demandestage"> {{demandestage.title}} </td>
+        <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.title}} </td>
     </ng-container>
     <hr>
     <ng-container matColumnDef="activitySector">
         <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Secteur d'activité </th>
-        <td class="polColor__noir" mat-cell *matCellDef="let demandestage"> {{demandestage.activitySector}} </td>
+        <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.activitySector}} </td>
     </ng-container>
 
     <ng-container matColumnDef="region">
         <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Région </th>
-        <td class="polColor__noir" mat-cell *matCellDef="let demandestage"> {{demandestage.region}} </td>
+        <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.region}} </td>
     </ng-container>
 
     <ng-container matColumnDef="startDate">
         <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Date d'inscription </th>
-        <td class="polColor__noir" mat-cell *matCellDef="let demandestage"> {{demandestage.startDate}} </td>
+        <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.startDate}} </td>
     </ng-container>
 
         <ng-container matColumnDef="actions">

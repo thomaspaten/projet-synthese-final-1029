@@ -1,5 +1,5 @@
 export interface DemandeStage {
-    _id: String,
+    __id: String,
     title: String,
     description: String,
     enterprise: String,

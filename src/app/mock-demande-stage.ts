@@ -2,7 +2,7 @@ import { DemandeStage } from "./demande-stages";
 
 export const DEMANDESTAGES:DemandeStage[] = [
     {
-    _id: '1',
+    __id: '1',
     title: 'Intégrateur Web',
     description: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     enterprise: 'Desjardins',
@@ -25,7 +25,7 @@ export const DEMANDESTAGES:DemandeStage[] = [
     linkToResume: 'link.pdf'
     },
     {
-    _id: '2',
+    __id: '2',
     title: 'Designer Web',
     description: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     enterprise: 'Rum&Code',
@@ -48,7 +48,7 @@ export const DEMANDESTAGES:DemandeStage[] = [
     linkToResume: 'link.pdf'
     },
     {
-    _id: '3',
+    __id: '3',
     title: 'Stagiaire en Marketing',
     description: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     enterprise: 'Balou Interactive',
@@ -71,7 +71,7 @@ export const DEMANDESTAGES:DemandeStage[] = [
     linkToResume: 'link.pdf'
     },
     {
-    _id: '4',
+    __id: '4',
     title: 'Stagiaire en Ressource Humaine',
     description: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     enterprise: 'Design Chez Paul',
