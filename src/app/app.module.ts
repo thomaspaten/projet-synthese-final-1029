@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 import { TableDemandeStageComponent } from './table-demande-stage/table-demande-stage.component';
 import { FormDemandeStageComponent } from './form-demande-stage/form-demande-stage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [DemandeStageService],
   bootstrap: [AppComponent]

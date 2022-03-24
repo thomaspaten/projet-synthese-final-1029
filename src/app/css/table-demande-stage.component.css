@@ -1,4 +1,9 @@
-/* Couleur de bouton */
+@charset "UTF-8";
+@import '../../../css/styles.css';
+/** Déclaration des variables de couleurs **/
+/*** Style de la balise hr ***/
+
+/*** Couleur de bouton ***/
 .couleurBtn__orange {
   background-color: orange;
   color: white;

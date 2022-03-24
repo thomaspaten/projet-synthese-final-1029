@@ -4,7 +4,9 @@ import { NgForm } from '@angular/forms';
 
 import { DemandeStage } from '../demande-stages';
 import { DemandeStageService } from '../demande-stage.service';
-//import { DEMANDESTAGES } from '../mock-demande-stage';
+import { DEMANDESTAGES } from '../mock-demande-stage';
+
+
 
 
 @Component({
@@ -13,7 +15,7 @@ import { DemandeStageService } from '../demande-stage.service';
   styleUrls: ['./table-demande-stage.component.sass']
 })
 export class TableDemandeStageComponent implements OnInit {
-  tableauDemandeStages: DemandeStage[] = [];
+  tableauDemandeStages: DemandeStage[] = DEMANDESTAGES;
   newDemandeStage!: DemandeStage;
   columnsToDisplay = ['title', 'activitySector', 'region', 'startDate'];
     
