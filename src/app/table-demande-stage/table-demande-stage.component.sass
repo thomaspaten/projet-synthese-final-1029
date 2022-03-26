@@ -1,8 +1,14 @@
-@import '../../../css/styles.css'
+/* Importation du style global */
+
+/** Importation de Bootstrap **/
+@import '../../../node_modules/bootstrap/dist/css/bootstrap'
+
 
 /** Déclaration des variables de couleurs **/
 
 $c-gris : #454545
+
+
 
 
 /*** Style de la balise hr ***/
@@ -12,7 +18,7 @@ $c-gris : #454545
 
 /*** Couleur de bouton ***/
 
-$couleurs: ("orange": orange, "gris": grey, "blanc": white, "noir": black)
+$couleurs: ("orange": orange, "gris": $c-gris, "blanc": white, "noir": black, "rouge": red)
 
 @each $couleur, $i in $couleurs
     .couleurBtn__
@@ -26,6 +32,6 @@ $couleurs: ("orange": orange, "gris": grey, "blanc": white, "noir": black)
     .bg__
         &#{$couleur}
             background-color: $i
-    .polColor__
+    .couleur__
         &#{$couleur}
             color: $i

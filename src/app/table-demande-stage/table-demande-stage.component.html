@@ -1,27 +1,27 @@
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-12">
-            <h1>Demandes de stage</h1>
             <button mat-button class="couleurBtn__orange btn">Ajouter une demande</button>
+            <h1>{{title}}</h1>
+            <i class="fa-solid fa-graduation-cap"></i>
             <table class="bg__blanc hr" mat-table #tableStage [dataSource]="tableauDemandeStages">
-
                 <ng-container matColumnDef="title">
-                    <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Poste </th>
-                    <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.title}} </td>
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Poste </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages" [ngClass]="{'couleur__rouge': demandestages.published === false}"><fa-icon [ngClass]="{'couleur__orange': demandestages.published === true, 'couleur__gris': demandestages.published === false}" [icon]="line" transform="rotate-90"></fa-icon> <fa-icon [icon]="graduation" ></fa-icon> {{demandestages.title}} </td>
                 </ng-container>
                 <ng-container matColumnDef="activitySector">
-                    <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Secteur d'activité </th>
-                    <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.activitySector}} </td>
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Secteur d'activité </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.activitySector}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="region">
-                    <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Région </th>
-                    <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.region}} </td>
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Région </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.region}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="startDate">
-                    <th class="polColor__noir" mat-header-cell *matHeaderCellDef> Date d'inscription </th>
-                    <td class="polColor__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.startDate}} </td>
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Date d'inscription </th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.startDate}} </td>
                 </ng-container>
 
                     <ng-container matColumnDef="actions">
@@ -39,4 +39,19 @@
         </div>
     </div>
 </div>
-    
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-12">
+            {{title}}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+
+        </div>
+    </div>
+</div> -->
