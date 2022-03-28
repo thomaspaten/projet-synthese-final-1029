@@ -1,13 +1,29 @@
 <div class="container-fluid p-5">
     <div class="row">
         <div class="col-12">
-            <button mat-button class="couleurBtn__orange btn">Ajouter une demande</button>
-            <h1>{{title}}</h1>
+            <h1>{{titre}}</h1>
+            <button mat-button class="couleurBtn__orange btn mb-5 mt-5">Ajouter une demande</button>
             <i class="fa-solid fa-graduation-cap"></i>
-            <table class="bg__blanc hr" mat-table #tableStage [dataSource]="tableauDemandeStages">
+            <table class="bg__blanc" mat-table #tableStage [dataSource]="tableauDemandeStages">
+                <ng-container matColumnDef="icones">
+                    <th mat-header-cell *matHeaderCellDef> Poste </th>
+                    <td mat-cell *matCellDef="let demandestages" [ngClass]="{'couleur__orange': demandestages.published === true, 'couleur__gris': demandestages.published === false}">
+                        <fa-icon [icon]="ligne" transform="rotate-90"></fa-icon>
+                        <fa-icon [icon]="graduation" ></fa-icon>
+                    </td>
+                </ng-container>
                 <ng-container matColumnDef="title">
-                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Poste </th>
-                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages" [ngClass]="{'couleur__rouge': demandestages.published === false}"><fa-icon [ngClass]="{'couleur__orange': demandestages.published === true, 'couleur__gris': demandestages.published === false}" [icon]="line" transform="rotate-90"></fa-icon> <fa-icon [icon]="graduation" ></fa-icon> {{demandestages.title}} </td>
+                    <th class="couleur__noir" mat-header-cell *matHeaderCellDef></th>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages">
+                        <span [ngClass]="{'couleur__rouge': demandestages.published === false}">
+                        {{demandestages.title}}
+                        </span>                        
+                        <br>
+                        {{demandestages.studentName}}
+                    </td>
+                    <td class="couleur__noir" mat-cell *matCellDef="let demandestages">
+                        
+                    </td>
                 </ng-container>
                 <ng-container matColumnDef="activitySector">
                     <th class="couleur__noir" mat-header-cell *matHeaderCellDef> Secteur d'activité </th>
@@ -24,11 +40,12 @@
                     <td class="couleur__noir" mat-cell *matCellDef="let demandestages"> {{demandestages.startDate}} </td>
                 </ng-container>
 
-                    <ng-container matColumnDef="actions">
+                <ng-container matColumnDef="actions">
                     <th mat-header-cell *matHeaderCellDef> </th>
-                    <td mat-cell *matCellDef="let demandestage" class="boutonsAction">
-                        <button mat-button><i class="material-icons">edit</i></button>
-                        <button mat-button><i class="material-icons">delete</i></button>
+                    <td mat-cell *matCellDef="let demandestages" class="boutonsAction">
+                        <button class="btn"><fa-icon [icon]="voir"></fa-icon></button>
+                        <button class="btn"><fa-icon [icon]="modifier"></fa-icon></button>
+                        <button class="btn"><fa-icon [icon]="suppression"></fa-icon></button>
                     </td>
                 </ng-container>
 

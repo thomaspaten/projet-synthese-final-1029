@@ -1,5 +1,7 @@
 /* Importation du style global */
 
+@import '../../../css/styles'
+
 /** Importation de Bootstrap **/
 @import '../../../node_modules/bootstrap/dist/css/bootstrap'
 
@@ -7,11 +9,6 @@
 /** Déclaration des variables de couleurs **/
 
 $c-gris : #454545
-
-
-
-
-/*** Style de la balise hr ***/
 
 .mat-header-cell
     color: $c-gris
@@ -35,3 +32,15 @@ $couleurs: ("orange": orange, "gris": $c-gris, "blanc": white, "noir": black, "r
     .couleur__
         &#{$couleur}
             color: $i
+
+/* Styliser le tableau */ 
+
+@mixin mat-table-columns($columns)
+    .mat-column-    
+        @each $matColumnDef, $props in $columns 
+            $width: map-get($props, 'width')
+            &#{$matColumnDef}             
+                flex: $width
+                min-width: $width
+                @if map-has-key($props, 'color')                 
+                    color: map-get($props, 'color')

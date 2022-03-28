@@ -19,16 +19,23 @@ import { TableDemandeStageComponent } from './table-demande-stage/table-demande-
 import { FormDemandeStageComponent } from './form-demande-stage/form-demande-stage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { VoirDemandeStageComponent } from './voir-demande-stage/voir-demande-stage.component';
+import { ModifDemandeStageComponent } from './modif-demande-stage/modif-demande-stage.component';
+import { AjoutDemandeStageComponent } from './ajout-demande-stage/ajout-demande-stage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableDemandeStageComponent,
-    FormDemandeStageComponent
+    FormDemandeStageComponent,
+    VoirDemandeStageComponent,
+    ModifDemandeStageComponent,
+    AjoutDemandeStageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
     MatTableModule,
     HttpClientModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FlexLayoutModule
   ],
   providers: [DemandeStageService],
   bootstrap: [AppComponent]
