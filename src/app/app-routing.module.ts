@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {     AccueilComponent } from './accueil/accueil.component';
+import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
+import { OffreDetailComponent } from './offre-detail/offre-detail.component';
 
 const routes: Routes = [
-  { path: 'accueil', component: AccueilComponent }
+  { path: 'offres', component: ListeOffresStagesComponent },
+  { path: 'offre/:_id', component: OffreDetailComponent},
 ];
 
 @NgModule({

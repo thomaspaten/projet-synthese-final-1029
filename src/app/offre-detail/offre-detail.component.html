@@ -1,0 +1,10 @@
+<h2>Détails</h2>
+<ng-container *ngIf="offre">
+  <div><span>id: </span>{{ offre._id }}</div>
+  <div>
+    <h1>{{ offre.title }}</h1>
+    <label for="offre-description">Offre nom: </label>
+    <input id="offre-description" [(ngModel)]="offre.description" />
+  </div>
+</ng-container>
+<button type="button" (click)="goBack()">go back</button>

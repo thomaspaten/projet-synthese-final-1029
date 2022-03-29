@@ -7,13 +7,7 @@ import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
-
-
-
-
-
-
-
+import {MatIconModule} from '@angular/material/icon'
 
 
 
@@ -23,13 +17,23 @@ import { ListeDesCandidatsComponent } from './liste-des-candidats/liste-des-cand
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { FormAjoutCandidatComponent } from './form-ajout-candidat/form-ajout-candidat.component';
+import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
+import { OffreStageService } from './offre-stage.service';
+import { MessageserviceComponent } from './messageservice/messageservice.component';
+import { OffreDetailComponent } from './offre-detail/offre-detail.component';
 
-
+// const appRoute: Routes = [
+//   {path: 'liste', component: ListeOffresStagesComponent},
+//   {path: 'liste/view/:id', component: VueOffreStageComponent},
+// ]
 @NgModule({
   declarations: [
     AppComponent,
     ListeDesCandidatsComponent,
     FormAjoutCandidatComponent,
+    ListeOffresStagesComponent,
+    MessageserviceComponent,
+    OffreDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,11 +46,11 @@ import { FormAjoutCandidatComponent } from './form-ajout-candidat/form-ajout-can
     MatTableModule,
     MatListModule,
     MatInputModule,
-    
+    MatIconModule
     
     
   ],
-  providers: [CandidatService],
+  providers: [CandidatService, OffreStageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
