@@ -8,6 +8,7 @@ import { Observable, of } from 'rxjs';
 import { InterfaceOffreStage } from './interface-offre-stage'; // Interface
 import { MessageService } from './message.service';
 
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -25,12 +26,11 @@ export class OffreStageService {
   }
 
   getOffre(_id:string): Observable<InterfaceOffreStage> {
-    const offre = OffreStageService.find(o => o.id === _id)!;
-    this.messageService.add(`OffreService: fetched offre id=${_id}`);
-    return of(offre);
+    const offre = this.http.get<InterfaceOffreStage>(`${this.offreUrl}/${_id}`);
+    return offre;
   }
-  static find(arg0: (o: any) => boolean) {
-    throw new Error('Method not implemented.');
-  }
+  // static find(arg0: (o: any) => boolean) {
+  //   throw new Error('Method not implemented.');
+  // }
 
 }

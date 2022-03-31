@@ -8,35 +8,59 @@
       [dataSource]="offrestage"
     >
       <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef>Poste</th>
-        <td mat-cell *matCellDef="let offrestage">{{ offrestage.title }}</td>
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="head-title">Poste</span>
+        </th>
+        <td mat-cell *matCellDef="let offrestage">
+          <div class="title_offer_wrapper title_offer_wrapper--inactive">
+            <div class="icon-box">
+              <mat-icon class="offer-icon">work</mat-icon>
+            </div>
+            <div class="title-offer-content">
+              <p class="small-text">{{ offrestage.title }}</p>
+              <span>{{ offrestage.enterprise }}</span>
+            </div>
+          </div>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="activitySector">
-        <th mat-header-cell *matHeaderCellDef>Secteur d'activité</th>
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="head-title">Secteur d'activité</span>
+        </th>
         <td mat-cell *matCellDef="let offrestage">
           {{ offrestage.stageType }}
         </td>
       </ng-container>
 
       <ng-container matColumnDef="region">
-        <th mat-header-cell *matHeaderCellDef>Région</th>
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="head-title">Région</span>
+        </th>
         <td mat-cell *matCellDef="let offrestage">Montréal</td>
       </ng-container>
 
       <ng-container matColumnDef="published">
-        <th mat-header-cell *matHeaderCellDef>Date de publication</th>
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="head-title">Date de publication</span>
+        </th>
         <td mat-cell *matCellDef="let offrestage">2022-03-22</td>
       </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let offre of offrestage">
-          <a routerLink="/offre/{{ offre._id }}"
-            ><mat-icon>remove_red_eye</mat-icon></a
-          >
-          <mat-icon>update</mat-icon>
-          <mat-icon>delete</mat-icon>
+          <div class="actions__wrapper">
+            <a class="actions__link" routerLink="/offre/{{ offre._id }}"
+              ><mat-icon>remove_red_eye</mat-icon></a
+            >
+            <a href="#"
+              ><mat-icon class="actions__link--maj">update</mat-icon></a
+            >
+            <a href="#"
+              ><mat-icon class="actions__link--delete">delete</mat-icon></a
+            >
+          </div>
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

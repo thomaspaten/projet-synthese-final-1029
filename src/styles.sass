@@ -2,11 +2,12 @@
 /* Style global du projet */
 
 /*** Déclaration des variables de couleurs ***/
-
+$c-bg-page: #F6F6F6
 $c-turquoise : #089DA4
 $c-jaune : #cd9635
 $c-med-jaune : #986D22
 $c-rouge : #BB2026
+$c-rouge-pale: #FF9FA3
 $c-med-rouge : #A00707
 $c-fonce-rouge : #821519
 $c-mauve : #7F2987
@@ -31,39 +32,55 @@ $c-iconVue : #22A6AC
 $c-iconCheck : #07A04A
 
 /*** Import de la font Open Sans ***/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,400&display=swap')
 
 /** Déclaration des variables de polices **/
 $f-primaire : 'Open Sans'
 
+body
+    color: $c-med-gris
+
 h1 
-    font: 700 46px/62px $f-primaire
+    font: 600 44px/60px $f-primaire !important
     @media(max-width: 767px)
-        font: 700 24px/28px $f-primaire 
+        font: 600 24px/28px $f-primaire !important
         
     
 
 h2 
-    font: 700 24px/30px $f-primaire
+    font: 600 24px/30px $f-primaire
     @media(max-width:767px)
-        font: 700 20px/24px $f-primaire
+        font: 600 20px/24px $f-primaire
         
     
 
 h3 
-    font: 700 24px/30px $f-primaire
+    font: 600 24px/30px $f-primaire !important
     @media(max-width:767px)
-        font: 700 20px/24px $f-primaire
+        font: 600 20px/24px $f-primaire !important
         
     
 
 p 
-    font: 400 20px/26px $f-primaire
+    font: 300 16px/24px $f-primaire !important
     @media(max-width:767px)
-        font: 400 16px/20px $f-primaire
+        font: 400 16px/20px $f-primaire !important
         
     
 
 .small-text 
-    font: 400 14px/16px $f-primaire 
+    font: 400 14px/16px $f-primaire !important
     
+// Wrapper des offres de stages
+.offer__wrapper 
+    max-width: 1317px
+    margin: 0 auto
+
+.offer-border
+    border-left: 10px solid $c-med-gris
+    padding-left: 8px
+
+.red-med-title
+    font: 600 24px/33px $f-primaire
+    color: $c-med-rouge
+    margin: 75px 0 55px
