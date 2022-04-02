@@ -1,19 +1,17 @@
 // Creer par Rachida Zaoug
-// Ceci est l'interface propre aux candidats.
+// Ceci est la class propre aux candidats.
 
-export interface Candidat {
+export class Candidat {
 
-__id: String
-name: String
-description: String
-jobTitle: String
-email: String
-phone: String
-address: String
-city: String
-province: String
-postalCode: String
-published: Boolean
-// updatedAt: Date
+_id!: number;
+name!: String;
+description!: String;
+jobTitle!: String;
+email!: String;
+phone!: String;
+address!: String;
+city!: String;
+province!: String;
+postalCode!: String;
 
 }

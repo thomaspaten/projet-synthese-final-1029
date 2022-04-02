@@ -1,24 +1,38 @@
 
 <!--Programmée par Rachida Zaoug -->
-<!-- Date de dernière modification: 2022-03-13 -->
+<!-- Date de dernière modification: 2022-03-28 -->
 
 
-<ng-container *ngFor="let candidat of candidats">
+<button mat-raised-button class="btn btn-info " style="float: left; " (click)="addCandidat()"> + Ajouter un candidat</button>
 
-  <mat-card>
-  
+
+
+<br>
+<br>
+
+    <ng-container *ngFor="let candidat of candidats">
+
+  <mat-card class="liste-card" (click)="candidatDetails(candidat._id)">
     <mat-card-title>
-      <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+      <mat-icon>person</mat-icon>
     </mat-card-title>
 
-    <mat-card-subtitle>
+    <mat-card-content>
     <dl> 
       <dt>{{candidat.name}}</dt>
       <dt>{{candidat.jobTitle}}</dt>
       <dt>{{candidat.email}}</dt>
       <dt>{{candidat.phone}}</dt>
     </dl>
-    </mat-card-subtitle>
+    </mat-card-content>
+
+ 
 </mat-card>
 </ng-container>
+
+
+
+
+
+
 

@@ -1,0 +1,24 @@
+form {
+  margin-left: 10rem;
+}
+
+.fiche_candidat1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+label {
+  border: none;
+  border-left: solid;
+}
+
+.presentaion {
+  border: solid;
+  border-radius: 2px;
+}
+/*# sourceMappingURL=fiche-candidat.component.css.map */

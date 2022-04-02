@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,KAAK;CAAG;;AAGzB,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CAAG;;AAG7B,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,KAAK;CAAG",
+    "sources": [
+        "form-maj-candidat.component.sass"
+    ],
+    "names": [],
+    "file": "form-maj-candidat.component.css"
+}

@@ -18,11 +18,29 @@ const httpOptions = {
 
     candidatsUrl = 'https://projet-synthese-api.herokuapp.com/api/2096335/candidate';
   
-    constructor(private http: HttpClient) { }
-  
-    getCandidats(): Observable<Candidat[]> {
-      return this.http.get<Candidat[]>(this.candidatsUrl);
+    constructor(private httpClient: HttpClient) { 
+
     }
+
+  // l'affichage des informations du candidat
   
+    public getCandidats(): Observable<any> {
+      return this.httpClient.get(this.candidatsUrl);
+    }
+
+    // affichage du detail du candidat
+    public getCandidat(_id:number): Observable<any> {
+      return this.httpClient.get(`${this.candidatsUrl}/${_id}`);
+    }
+
+  
+    // Fonction pour l'ajout d'un candidat
+    public addCandidat(candidat: object): Observable<object>{
+      return this.httpClient.post(`${this.candidatsUrl}`, candidat);
+    }
+    
+    public updateCandidat(_id: number, value: any): Observable<any> {
+      return this.httpClient.put(`${this.candidatsUrl}/${_id}`, value);
+    }
     
   }

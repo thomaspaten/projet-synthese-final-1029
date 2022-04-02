@@ -1,0 +1,58 @@
+<!-- <p>form-maj-candidat works!</p> -->
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-03-28 -->
+
+<h2>Formulaire de mise à jour du candidat</h2>
+
+<form (ngSubmit)="onSubmit()"> 
+
+          <label for="name"><h4>Nom complet: </h4></label>
+          <input type="text" class="form-control" id="name"  required [(ngModel)]="candidat.name" name="name">
+          <br>
+          <br>
+     
+          <label for="description"><h4>Présentation</h4></label>
+          <textarea type="text" rows="10" cols="60" class="form-control" id="description"  required [(ngModel)]="candidat.description" name="description"></textarea>
+          
+
+          <br>
+          <div class="fiche_candidat1"> 
+          <label for="jobtitle"><h4>Titre du job: </h4></label>
+          <input type="text" class="form-control" id="jobtitle"  required [(ngModel)]="candidat.jobTitle" name="jobtitle">
+      
+
+          <br>
+          <label for="address"><h4>Adresse: </h4></label>
+          <input type="text" class="form-control" id="address"  required [(ngModel)]="candidat.address" name="address">
+        
+
+          <br>
+          <label for="city"><h4>Ville: </h4></label>
+          <input type="text" class="form-control" id="city"  required [(ngModel)]="candidat.city" name="city" >
+       
+
+          <br>
+         
+          <label for="postalCode"><h4>Code postal </h4></label>
+          <input type="text" class="form-control" id="postalCode"  required [(ngModel)]="candidat.postalCode" name="postalCode">
+         
+        
+          <br>
+          <label for="phone"><h4>Téléphone: </h4></label>
+          <input type="text" class="form-control" id="phone"  required [(ngModel)]="candidat.phone" name="phone">
+        
+          <br>
+          <label for="email"><h4>Email: </h4></label>
+          <input type="text" class="form-control" id="email"  required [(ngModel)]="candidat.email" name="email">
+          </div>
+
+          <br>
+          <div>
+            <button type="submit" class="btn btn-success">Enregistrer</button>
+
+          </div>
+    
+      </form>
+
+      <br>
+      <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button><br>

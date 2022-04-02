@@ -1,0 +1,70 @@
+<!-- <p>fiche-candidat works!</p> -->
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-03-28 -->
+
+<h2>Fiche complète du candidat</h2>
+
+<button mat-raised-button class="btn btn-info" style="float: right; "  (click)="editCandidat(candidat._id)"><mat-icon>update</mat-icon></button>
+<br>
+<br>
+
+
+<form *ngIf="candidat">
+
+          <h3>Nom complet: </h3>
+          <label>{{candidat.name}}</label>
+          <br>
+          <br>
+     
+          <h3>Présentation</h3>
+          <label>{{candidat.description}}</label>
+          
+
+          <br>
+          <div class="fiche_candidat1"> 
+          <h3>Titre du job: </h3>
+          <label>{{candidat.jobTitle}}</label>
+      
+
+          <br>
+          <h3>Adresse: </h3>
+          <label>{{candidat.address}}</label>
+        
+
+          <br>
+          <h3>Ville: </h3>
+          <label>{{candidat.city}}</label>
+       
+
+          <br>
+          <h3>Code postal </h3>
+          <label>{{candidat.postalCode}}</label>
+         
+        
+          <br>
+          <h3>Téléphone: </h3>
+          <label>{{candidat.phone}}</label>
+        
+          <br>
+          <h3>Email: </h3>
+          <label>{{candidat.email}}</label>
+          </div>
+    
+      </form>
+
+      <br>
+        <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button><br>
+
+
+    
+
+
+    
+    
+  
+  
+
+
+
+
+

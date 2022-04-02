@@ -1,8 +1,10 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Candidat } from '../candidat';
 import { CandidatService } from '../candidat.service';
+import { Router } from '@angular/router';
+
 
 
 
@@ -13,12 +15,42 @@ import { CandidatService } from '../candidat.service';
 })
 export class FormAjoutCandidatComponent implements OnInit {
 
-  @Input() candidat: Candidat = {__id: '', name: '', description: '', jobTitle: '', email: '', phone: '', address: '', city: '', province: '', postalCode: '', published: true};
+  // @Input() candidat: Candidat = {_id: '', name: '', description: '', jobTitle: '', email: '', phone: '', address: '', city: '', province: '', postalCode: '', published: true};
+  
+
+  // panneau de details
+  candidat: Candidat = new Candidat();
+
+  submitted = false;
 
 
-  constructor(private candidatService: CandidatService) { }
 
-  ngOnInit(): void {
-  }
+  constructor(private candidatService: CandidatService, private router: Router) { }
+
+  ngOnInit() {}
+
+  // panneau details
+  newCandidat(): void {
+    this.submitted = false;
+    this.candidat = new Candidat();
+    }
+
+    save() {
+      this.candidatService.addCandidat(this.candidat)
+        .subscribe(data => console.log(data), error => console.log(error));
+      this.candidat = new Candidat();
+      this.listesCandidat();
+    }
+
+    onSubmit() {
+      this.submitted = true;
+      this.save();
+    }
+
+
+  listesCandidat() {  
+    this.router.navigate(['candidats'])
+   }
+
 
 }

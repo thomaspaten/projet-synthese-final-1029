@@ -1,1 +1,17 @@
-/* No CSS *//*# sourceMappingURL=app.component.css.map */
+mat-sidenav {
+  width: 200px;
+  background: white;
+  color: black;
+}
+
+mat-toolbar {
+  background-color: white;
+}
+
+.content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px;
+}
+/*# sourceMappingURL=app.component.css.map */

@@ -1,33 +1,45 @@
 @charset "UTF-8";
 /*J'ai utilisé le flexbox pour aligner les elements de ma carte */
-.mat-card {
+.liste-card {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: center;
-  width: 350px;
-  margin-bottom: 3rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 45px;
+  margin-left: 50px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.mat-card-title {
+mat-card-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: start;
+          justify-content: flex-start;
 }
 
-.mat-card-subtitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+mat-card-content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#btn__button4 {
+  border-style: solid;
+  border-color: orange;
+  border-radius: 20px;
+  background: transparent;
+  color: orange;
+  margin: 10px;
+}
+
+#btn__button4:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
 }
 /*# sourceMappingURL=liste-des-candidats.component.css.map */

@@ -10,4 +10,9 @@ form {
 p {
   color: black;
 }
+
+.bouton_ajout_candidat {
+  padding: 20px;
+  margin-bottom: 20px;
+}
 /*# sourceMappingURL=form-ajout-candidat.component.css.map */

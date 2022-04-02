@@ -1,8 +1,18 @@
-<p>form-ajout-candidat works!</p>
+<!-- <p>form-ajout-candidat works!</p> -->
+<!--Programmée par Rachida Zaoug -->
+<!-- Date de dernière modification: 2022-03-28 -->
 
 
-<form #candidatForm="ngForm">
 
+<h2>Formulaire d'ajout de candidat</h2>
+
+
+<form (ngSubmit)="onSubmit()">
+
+    
+    <!-- <button class="bouton_ajout_candidat" matSuffix type="submit"  mat-raised-button (click)="onCancel()">Annuler</button>&nbsp; -->
+    
+    <br>
    
     <mat-form-field appearance="fill" class="half-width">
         <mat-label>Nom et prénom</mat-label>
@@ -78,8 +88,17 @@
         <mat-error *ngIf="phone.invalid && (phone.dirty || phone.touched) && phone.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
     </mat-form-field>
 
+    <br>
+    <!-- <button class="bouton_ajout_candidat" matSuffix type="submit"  mat-raised-button (click)="onCancel()">Annuler</button>&nbsp; -->
+    <!-- <button class="bouton_ajout_candidat" matSuffix type="submit" mat-raised-button>enregistrer</button> -->
 
-    
+    <button class="bouton_ajout_candidat" matSuffix type="submit" mat-raised-button>soumettre</button>
+    <br>
+    <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button><br>
+
+
+
+
 
 
 </form>
