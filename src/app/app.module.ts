@@ -16,27 +16,33 @@ import { MatCardModule } from '@angular/material/card';
 // Composants
 
 import { AppComponent } from './app.component';
-
+import { AccueilComponent } from './accueil/accueil.component';
 import { FormAjoutCandidatComponent } from './form-ajout-candidat/form-ajout-candidat.component';
 import { ListeDesCandidatsComponent } from './liste-des-candidats/liste-des-candidats.component';
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { EntreprisesDetailsComponent } from './entreprises-details/entreprises-details.component';
 import { IdentificationComponent } from './identification/identification.component';
+import { LoginComponent } from './login/login.component';
 
 // Services
 
 import { CandidatService } from './candidat.service';
 import { IdentificationService } from './identification.service';
+import { EntreprisesService } from './entreprises.service';
+import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AccueilComponent,
     ListeDesCandidatsComponent,
     FormAjoutCandidatComponent,
     EntreprisesComponent,
     EntreprisesDetailsComponent,
-    IdentificationComponent
+    IdentificationComponent,
+    LoginComponent,
+    AjoutEntrepriseComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,7 @@ import { IdentificationService } from './identification.service';
     MatInputModule,
 
   ],
-  providers: [CandidatService,IdentificationService],
+  providers: [EntreprisesService,CandidatService,IdentificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

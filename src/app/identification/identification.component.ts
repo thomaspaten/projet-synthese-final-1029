@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
+import { IdentificationService } from '../identification.service';
+import { CandidatService } from '../candidat.service';
 
 @Component({
   selector: 'app-identification',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./identification.component.sass']
 })
 export class IdentificationComponent implements OnInit {
-
-  constructor() { }
+ nomEtPrenom = this.IdentificationService.obtenirNomEtPrenom();
+  constructor(
+    private IdentificationService: IdentificationService
+  ) { }
 
   ngOnInit(): void {
+    this.nomEtPrenom;
   }
 
 }
