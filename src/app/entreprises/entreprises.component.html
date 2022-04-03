@@ -1,8 +1,10 @@
 
-<div class="container">
-  <app-identification></app-identification>
+<div class="container" >
+
+<li *ngFor="let entreprise of entreprises">{{entreprise.name}}</li>
+
   <div class="row mx-lg-3 my-5">
-    <div class="col-12">  <h1 class="mx-lg-5">Entreprises</h1></div>
+    <div class="col-12">  <h1 class="mx-lg-5">Insérer adress</h1></div>
   </div>
   <div class="row mx-lg-3 my-4">
     <div class="col-12">
@@ -19,7 +21,7 @@
         </div>
         <div class="col-12 col-md-8 ps-lg-4">
           <div class="card-body">
-            <h5 class="card-title">Mediavox</h5>
+            <h5 class="card-title">Me</h5>
             <p class="card-text">Insérer adresse</p>
             <p class="card-text">Insérer téléphone</p>
             <p class="card-text">Insérer télécopieur</p>

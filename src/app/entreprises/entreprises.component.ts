@@ -1,6 +1,8 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
-import { NgForm } from '@angular/forms';
+// Créer par Thomas Patenaude Poulin
+
+import { Component,OnInit } from '@angular/core';
+import { EntreprisesService } from '../entreprises.service';
+import { Entreprise } from '../entreprise';
 
 @Component({
   selector: 'app-entreprises',
@@ -10,9 +12,15 @@ import { NgForm } from '@angular/forms';
 
 export class EntreprisesComponent implements OnInit {
 
-  constructor() { }
+  entreprises: Entreprise[] = []
+  constructor(private entreprisesService: EntreprisesService) {}
 
   ngOnInit(): void {
+    this.obtenirEntreprises
+  }
+  obtenirEntreprises(): void{
+    this.entreprisesService.ObtenirEntreprises().subscribe(donnee => {this.entreprises = donnee; console.log("ping de entreprises.ts")})
+
   }
 
 }
