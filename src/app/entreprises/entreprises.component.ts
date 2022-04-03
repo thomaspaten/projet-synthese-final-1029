@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { NgForm } from '@angular/forms';
 
@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './entreprises.component.html',
   styleUrls: ['./entreprises.component.sass']
 })
+
 export class EntreprisesComponent implements OnInit {
 
   constructor() { }
