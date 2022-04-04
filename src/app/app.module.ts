@@ -21,6 +21,8 @@ import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-s
 import { OffreStageService } from './offre-stage.service';
 import { MessageserviceComponent } from './messageservice/messageservice.component';
 import { OffreDetailComponent } from './offre-detail/offre-detail.component';
+import { MajOffreStageComponent } from './maj-offre-stage/maj-offre-stage.component';
+import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.component';
 
 // const appRoute: Routes = [
 //   {path: 'liste', component: ListeOffresStagesComponent},
@@ -34,6 +36,8 @@ import { OffreDetailComponent } from './offre-detail/offre-detail.component';
     ListeOffresStagesComponent,
     MessageserviceComponent,
     OffreDetailComponent,
+    MajOffreStageComponent,
+    AjoutOffreStageComponent,
   ],
   imports: [
     BrowserModule,

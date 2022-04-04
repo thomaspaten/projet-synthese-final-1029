@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OffreStageService } from '../offre-stage.service'; // Service
 import { InterfaceOffreStage } from '../interface-offre-stage'; // Interface 
+import { MajOffreStageComponent } from '../maj-offre-stage/maj-offre-stage.component';
 
 @Component({
   selector: 'app-liste-offres-stages',
@@ -11,6 +12,7 @@ export class ListeOffresStagesComponent implements OnInit {
   title = "Offres de stage";
   btnAction = "Ajouter une offre de stage"
   offrestage: InterfaceOffreStage[] = [];
+  selectedOffre?: InterfaceOffreStage;
 
 
   // colonnes du tableau de la liste des offres de stages '
@@ -26,5 +28,10 @@ export class ListeOffresStagesComponent implements OnInit {
     this.offrestageService.getOffresStages()
     .subscribe(offrestage => this.offrestage = offrestage);
   } 
+
+  deleteOffre(offrestage: InterfaceOffreStage){
+    this.offrestageService.deleteOffre(offrestage)
+    .subscribe(() => (this.offrestage = this.offrestage));
+  }
 
 }

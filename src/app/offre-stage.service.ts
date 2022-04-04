@@ -29,8 +29,19 @@ export class OffreStageService {
     const offre = this.http.get<InterfaceOffreStage>(`${this.offreUrl}/${_id}`);
     return offre;
   }
-  // static find(arg0: (o: any) => boolean) {
-  //   throw new Error('Method not implemented.');
-  // }
 
+  editOffre(offre: InterfaceOffreStage): Observable<InterfaceOffreStage> {
+    const url = `${this.offreUrl}/${offre._id}`;
+    return this.http.put<InterfaceOffreStage>(url, offre, httpOptions);
+  }
+
+  addOffre(offre: InterfaceOffreStage) : Observable<InterfaceOffreStage> {
+    return this.http.post<InterfaceOffreStage>(this.offreUrl, offre, httpOptions);
+  }
+
+  deleteOffre(offre: InterfaceOffreStage): Observable<InterfaceOffreStage> {
+    const url =`${this.offreUrl}/${offre._id}`;
+    return this.http.delete<InterfaceOffreStage>(url);
+  }
 }
+

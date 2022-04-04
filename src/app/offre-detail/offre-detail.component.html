@@ -6,7 +6,14 @@
         <h1 class="offer-view__title">{{ offre.title }}</h1>
         <p class="offer-view__enterprise">{{ offre.enterprise }}</p>
       </div>
-      <div class="offer-view__actions">actions</div>
+      <div class="offer-view__actions">
+        <!-- Permettra de retourner à la liste des offres de stages -->
+        <mat-icon (click)="goBack()">done</mat-icon>
+        <!-- Permettra d'accèder au formulaire de mise à jour de l'offre de stage -->
+        <mat-icon routerLink="/maj-offre/{{ offre._id }}">edit</mat-icon>
+        <!-- Permettra de supprimer l'offre de stage -->
+        <mat-icon (click)="goBack()">close</mat-icon>
+      </div>
       <div class="offer-view__details-wrapper">
         <h2 class="details__title">Description de la tâche</h2>
         <p>{{ offre.description }}</p>
@@ -51,9 +58,5 @@
     </div>
   </div>
 </ng-container>
-<!-- <div>
-    <label for="offre-description">Offre nom: </label>
-    <input id="offre-description" [(ngModel)]="offre.description" />
-  </div> -->
 
 <button type="button" (click)="goBack()">go back</button>
