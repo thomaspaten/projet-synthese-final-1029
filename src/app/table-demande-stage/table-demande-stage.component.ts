@@ -10,7 +10,7 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 import { DemandeStage } from '../demande-stages';
 import { DemandeStageService } from '../demande-stage.service';
-import { DEMANDESTAGES } from '../mock-demande-stage';
+//import { DEMANDESTAGES } from '../mock-demande-stage';
 
 
 @Component({
@@ -19,7 +19,7 @@ import { DEMANDESTAGES } from '../mock-demande-stage';
   styleUrls: ['./table-demande-stage.component.sass']
 })
 export class TableDemandeStageComponent implements OnInit {
-  tableauDemandeStages: DemandeStage[] = DEMANDESTAGES;
+  tableauDemandeStages: DemandeStage[] = [];
   newDemandeStage!: DemandeStage;
   columnsToDisplay = ['icones', 'title', 'activitySector', 'region', 'startDate', 'actions'];
   titre = 'Demande de stage';
@@ -32,18 +32,17 @@ export class TableDemandeStageComponent implements OnInit {
   constructor(private demandeStageService: DemandeStageService) { }
 
   ngOnInit(): void {
-    this.newDemandeStage.title="";
     this.getDemandeStages();
   }
 
   getDemandeStages(): void {
     this.demandeStageService.getDemandeStages()
-      .subscribe(resultat => this.tableauDemandeStages = resultat)
+      .subscribe(tableauDemandeStages => this.tableauDemandeStages = tableauDemandeStages)
   }
 
   onAdd(tableDemandeStage: MatTable<DemandeStage>, demandeStageFormAjout: NgForm){
     if(demandeStageFormAjout.valid){
-      this.demandeStageService.addDemandeStages(this.newDemandeStage)
+      this.demandeStageService.ajoutDemandeStage(this.newDemandeStage)
       .subscribe(demandeStage =>{this.tableauDemandeStages.push(demandeStage);
       demandeStageFormAjout.resetForm();
       tableDemandeStage.renderRows();
