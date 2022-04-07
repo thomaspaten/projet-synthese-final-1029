@@ -15,7 +15,6 @@ import { Router } from '@angular/router';
 })
 export class FormAjoutCandidatComponent implements OnInit {
 
-  // @Input() candidat: Candidat = {_id: '', name: '', description: '', jobTitle: '', email: '', phone: '', address: '', city: '', province: '', postalCode: '', published: true};
   
 
   // panneau de details

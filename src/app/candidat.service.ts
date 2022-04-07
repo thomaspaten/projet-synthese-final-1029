@@ -42,5 +42,9 @@ const httpOptions = {
     public updateCandidat(_id: number, value: any): Observable<any> {
       return this.httpClient.put(`${this.candidatsUrl}/${_id}`, value);
     }
+
+    public deleteCandidat(_id: number): Observable<any> {
+      return this.httpClient.delete(`${this.candidatsUrl}/${_id}`, { responseType: 'text' });
+    }
     
   }

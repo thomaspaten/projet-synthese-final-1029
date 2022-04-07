@@ -13,7 +13,6 @@ import { FicheCandidatComponent } from '../fiche-candidat/fiche-candidat.compone
 })
 export class ListeDesCandidatsComponent implements OnInit {
 
-  // candidats: Candidat[] = [];
 
   selectedCandidat?: Candidat;
 
@@ -54,10 +53,6 @@ export class ListeDesCandidatsComponent implements OnInit {
   
   }
 
-  
-  // ngOnInit(): void {
-  //   this.getCandidats()
-  // }
 
   getCandidats(): void {
     this.candidatService.getCandidats()

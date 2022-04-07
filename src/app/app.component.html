@@ -3,7 +3,7 @@
 
  
     <!-- Ce code est responsable de l'apparition su menu humburger lorsque l'écran est réduite -->
-    <mat-toolbar class="mat-elevation-z8">
+    <mat-toolbar>
         <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
             <mat-icon *ngIf="!sidenav.opened">
                 menu
@@ -15,9 +15,9 @@
         <app-navbar></app-navbar>
     </mat-toolbar>
 
-    <!-- Ce code est responsable du contenu du site-tout le contenu des pages principales et secondaires est  dedans -->
+    <!-- Ce code est responsable du contenu du site-tout le contenu des pages principales et secondaires se trouve dedans -->
     <mat-sidenav-container>
-        <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <mat-sidenav #sidenav="matSidenav">
         <app-sidebar></app-sidebar>
         </mat-sidenav>
         <mat-sidenav-content>

@@ -50,16 +50,13 @@ p {
 }
 
 /* You can add global styles to this file, and also import other style files */
-ul {
-  margin: auto;
+button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  list-style-type: none;
-}
-
-li {
-  margin-left: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 15px;
 }
 
 #btn__button1 {

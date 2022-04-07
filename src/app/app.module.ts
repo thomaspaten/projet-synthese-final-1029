@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeDesCandidatsComponent } from './liste-des-candidats/liste-des-candidats.component';
@@ -30,6 +31,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FormMajCandidatComponent } from './form-maj-candidat/form-maj-candidat.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,8 +43,11 @@ import { FormMajCandidatComponent } from './form-maj-candidat/form-maj-candidat.
     SidebarComponent,
     NavbarComponent,
     FormMajCandidatComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
+    MatDialogModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     MatButtonModule,
     MatToolbarModule,

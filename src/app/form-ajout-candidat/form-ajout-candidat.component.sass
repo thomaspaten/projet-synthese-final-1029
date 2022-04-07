@@ -1,6 +1,25 @@
+@import '../../styles.sass'
+@import '../../styles_mixin'
+
 form
     min-width: 150px
+    margin-left: 60px
+ 
 
+
+.container-fluid
+    display: grid
+    width: 150%
+    padding: 5%
+
+mat-form
+    display: inline-flex
+    
+input
+    border: none
+    border-left: solid
+
+    
 .half-width
     width: 45%
     margin-right: 10px
@@ -9,7 +28,34 @@ p
     color: black
 
 
-.bouton_ajout_candidat
-    padding: 20px
-    margin-bottom: 20px
+#btn
+    &__boutonAjoutCandidat
+        color: $c-blanc
+        background-color: $c-mauve
+    &__boutonCancelCandidat
+        color: $c-gris-fonce
+        background-color: $c-inactif 
+    
 
+#btn__boutonAjoutCandidat:hover
+    @include hover_button
+#btn__boutonCancelCandidat:hover
+    @include hover_button
+    
+    
+
+       
+
+
+
+
+
+
+
+
+.container-info-perso
+  
+// .container-contact
+//     display: flex
+//     align-content: center
+   

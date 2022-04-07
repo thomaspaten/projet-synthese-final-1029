@@ -1,11 +1,13 @@
 /*J'ai utilisé le flexbox pour aligner les elements de ma carte */
+@import '../../styles.sass'
+@import '../../styles_mixin'
+
 
 .liste-card
-  display: inline-flex
-  padding: center
-  margin-left: 50px
-  height: auto
-  margin-bottom: 10px
+    display: inline-flex
+    justify-content: space-around
+    margin: 15px
+
 
 
 
@@ -18,18 +20,15 @@ mat-card-content
     justify-content: center
 
 
-#btn
+.btn
     &__button4
-        border-style: solid
-        border-color: orange
-        border-radius: 20px
-        background: transparent
-        color: orange
-        margin: 10px
+        @include navbar_button
+        border-color: $c-iconCheck
+        color: $c-iconCheck
+        
+.btn__button4:hover
+    @include hover_button
 
-#btn__button4:hover
-    cursor: pointer
-    filter: brightness(80%) 
     
 
   
