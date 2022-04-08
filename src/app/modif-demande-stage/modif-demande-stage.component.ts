@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DemandeStageService } from '../demande-stage.service';
 import { DemandeStage } from '../demande-stages';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-modif-demande-stage',
@@ -9,26 +11,42 @@ import { DemandeStage } from '../demande-stages';
   styleUrls: ['./modif-demande-stage.component.sass']
 })
 export class ModifDemandeStageComponent implements OnInit {
-  @Input() demandeStage: DemandeStage = {
-    _id: '', title: '', studentName: '', studentPresentation: '',school: '', startDate: '', endDate: '', program: '',
-    stageType: '', hoursPerWeek: 0, additionalInfo: '', published: true, paid: '', active: true, skills: '', region: '',
-    activitySector: '', city: '', linkToResume: '', __v: 0
+
+  titre = 'Demande de stage';
+
+  @Input() demande: DemandeStage = {
+    _id: '', title: '', studentName: '', studentPresentation: '',school: '', startDate: new Date, endDate: new Date, program: '',
+  stageType: '', hoursPerWeek: 0, additionalInfo: '', published: true, paid: [''], active: true, skills: [''], region: '',
+    activitySector: '', city: '', linkToResume: ''
   }
   @Output() majTableau = new EventEmitter
 
-  constructor(private demandeStageService: DemandeStageService) { }
+  constructor(
+    private demandeStageService: DemandeStageService,
+    private route: ActivatedRoute,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    this.getDemande();
   }
 
-  onSave(demandeStageForm: NgForm) {
-    if (demandeStageForm.valid) {
-      if(this.demandeStage._id != null && this.demandeStage._id !='') {
-        this.demandeStageService.majDemandeStage(this.demandeStage).subscribe(_ => { this.majTableau.emit()})
-      } else {
-        this.demandeStageService.ajoutDemandeStage(this.demandeStage).subscribe(_ => {this.majTableau.emit()})
+  getDemande(): void {
+    const id = String(this.route.snapshot.paramMap.get('_id'));
+    this.demandeStageService.getDemande(id)
+    .subscribe(demande => this.demande = demande);
+  } 
+  
+  onSave(offreForm: NgForm){
+    if(offreForm.valid){
+      if(!this.demande._id){
+        this.demandeStageService.majDemandeStage(this.demande).subscribe();
       }
     }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

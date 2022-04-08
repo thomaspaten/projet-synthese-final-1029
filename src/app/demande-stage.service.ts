@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DemandeStageService {
-  demandeStageUrl = 'https://projet-synthese-api.herokuapp.com/api/0335324/internship-request/';
+  demandeStageUrl = 'https://projet-synthese-api.herokuapp.com/api/0335324/internship-request';
 
   constructor(private http: HttpClient) { }
 
@@ -19,16 +19,23 @@ export class DemandeStageService {
     return this.http.get<DemandeStage[]>(this.demandeStageUrl);
   }
 
+  getDemande(_id:string): Observable<DemandeStage> {
+    const demandeStage = this.http.get<DemandeStage>(`${this.demandeStageUrl}/${_id}`);
+    return demandeStage;
+  }
+
   ajoutDemandeStage(demandeStage: DemandeStage): Observable<DemandeStage> {
-    return this.http.post<DemandeStage>(this.demandeStageUrl, demandeStage, httpOptions)
+    return this.http.post<DemandeStage>(this.demandeStageUrl, demandeStage, httpOptions);
   }
 
   majDemandeStage(demandeStage: DemandeStage): Observable<DemandeStage> {
-    return this.http.put<DemandeStage>(this.demandeStageUrl + "_id" + demandeStage._id, demandeStage, httpOptions);
+    const url = `${this.demandeStageUrl}/${demandeStage._id}`;
+    return this.http.put<DemandeStage>(url, demandeStage, httpOptions);
   }
 
-  supprDemandestage(id: String): Observable<DemandeStage> {
-    return this.http.delete<DemandeStage>(this.demandeStageUrl + "_id" + id);
+  supprDemandestage(demandeStage: DemandeStage): Observable<DemandeStage> {
+    const url = `${this.demandeStageUrl}/${demandeStage._id}`;
+    return this.http.delete<DemandeStage>(url);
   }
 
 }

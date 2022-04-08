@@ -8,7 +8,7 @@ import { TableDemandeStageComponent } from './table-demande-stage/table-demande-
 const routes: Routes = [
   { path: 'ajoutDemande', component: AjoutDemandeStageComponent},
   { path: 'voirDemande', component: VoirDemandeStageComponent},
-  { path: 'modifDemande', component: ModifDemandeStageComponent},
+  { path: 'modifDemande/:_id', component: ModifDemandeStageComponent},
   { path: 'tableDemande', component: TableDemandeStageComponent}
 ];
 

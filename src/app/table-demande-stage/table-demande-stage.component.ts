@@ -20,9 +20,9 @@ import { DemandeStageService } from '../demande-stage.service';
 })
 export class TableDemandeStageComponent implements OnInit {
   tableauDemandeStages: DemandeStage[] = [];
-  newDemandeStage!: DemandeStage;
   columnsToDisplay = ['icones', 'title', 'activitySector', 'region', 'startDate', 'actions'];
   titre = 'Demande de stage';
+  selectedDemande?: DemandeStage;
   graduation = faGraduationCap;
   ligne = faMinus;
   modifier= faEdit;
@@ -40,15 +40,5 @@ export class TableDemandeStageComponent implements OnInit {
       .subscribe(tableauDemandeStages => this.tableauDemandeStages = tableauDemandeStages)
   }
 
-  onAdd(tableDemandeStage: MatTable<DemandeStage>, demandeStageFormAjout: NgForm){
-    if(demandeStageFormAjout.valid){
-      this.demandeStageService.ajoutDemandeStage(this.newDemandeStage)
-      .subscribe(demandeStage =>{this.tableauDemandeStages.push(demandeStage);
-      demandeStageFormAjout.resetForm();
-      tableDemandeStage.renderRows();
-      });
-    }
-    
-  }
-
+  
 }

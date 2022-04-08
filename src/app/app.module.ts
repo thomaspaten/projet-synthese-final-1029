@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { DemandeStageService } from './demande-stage.service';
 import { TableDemandeStageComponent } from './table-demande-stage/table-demande-stage.component';
@@ -49,7 +51,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     NgbModule,
     FontAwesomeModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [DemandeStageService],
   bootstrap: [AppComponent]

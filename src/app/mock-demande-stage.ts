@@ -1,4 +1,4 @@
-import { DemandeStage } from "./demande-stages";
+/* import { DemandeStage } from "./demande-stages";
 
 export const DEMANDESTAGES:DemandeStage[] = [
     {
@@ -7,21 +7,20 @@ export const DEMANDESTAGES:DemandeStage[] = [
     studentName: 'Steve Rogers',
     studentPresentation: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     school: 'Cegep de Trois-Rivières',
-    startDate: '21/3/2022',
+    startDate: 2022-3-21,
     endDate: '21/06/2022',
     program: 'Intégration Web',
     stageType: 'Temps plein',
     hoursPerWeek: 35,
     additionalInfo: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     published: true,
-    paid: "À la discrétion de l'entreprise",
+    paid: ["À la discrétion de l'entreprise"],
     active: true,
-    skills: 'HTML, CSS',
+    skills: ['HTML, CSS'],
     region: 'Mauricie',
     activitySector: "Technologie de l'information",
     city: 'Trois-Rivières',
-    linkToResume: 'link.pdf',
-    __v: 0
+    linkToResume: 'link.pdf'
     },
     {
     _id: '2',
@@ -36,14 +35,13 @@ export const DEMANDESTAGES:DemandeStage[] = [
     hoursPerWeek: 35,
     additionalInfo: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     published: true,
-    paid: "À la discrétion de l'entreprise",
+    paid: ["À la discrétion de l'entreprise"],
     active: true,
-    skills: 'HTML, CSS',
+    skills: ['HTML, CSS'],
     region: 'Mauricie',
     activitySector: "Technologie de l'information",
     city: 'Trois-Rivières',
-    linkToResume: 'link.pdf',
-    __v: 0
+    linkToResume: 'link.pdf'
     },
     {
     _id: '3',
@@ -58,14 +56,13 @@ export const DEMANDESTAGES:DemandeStage[] = [
     hoursPerWeek: 35,
     additionalInfo: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     published: true,
-    paid: "À la discrétion de l'entreprise",
+    paid: ["À la discrétion de l'entreprise"],
     active: true,
-    skills: 'HTML, CSS',
+    skills: ['HTML, CSS'],
     region: 'Mauricie',
     activitySector: "Technologie de l'information",
     city: 'Trois-Rivières',
-    linkToResume: 'link.pdf',
-    __v: 0
+    linkToResume: 'link.pdf'
     },
     {
     _id: '4',
@@ -80,13 +77,12 @@ export const DEMANDESTAGES:DemandeStage[] = [
     hoursPerWeek: 35,
     additionalInfo: 'Spicy jalapeno bacon ipsum dolor amet cow meatloaf jowl leberkas turkey boudin buffalo shank landjaeger. Sirloin pancetta burgdoggen, brisket meatloaf ball tip venison beef ribs chuck rump frankfurter bacon. Tenderloin rump swine meatball. Boudin pork chop sirloin beef doner.',
     published: true,
-    paid: "À la discrétion de l'entreprise",
+    paid: ["À la discrétion de l'entreprise"],
     active: true,
-    skills: 'HTML, CSS',
+    skills: ['HTML, CSS'],
     region: 'Mauricie',
     activitySector: "Technologie de l'information",
     city: 'Trois-Rivières',
-    linkToResume: 'link.pdf',
-    __v: 0
+    linkToResume: 'link.pdf'
     }
-]
+] */
