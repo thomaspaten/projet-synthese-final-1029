@@ -51,79 +51,46 @@ p {
 
 /* You can add global styles to this file, and also import other style files */
 form {
-  min-width: 150px;
-  margin-left: 60px;
+  margin-left: 5rem;
 }
 
-.container {
-  display: -ms-grid;
-  display: grid;
+.entete {
+  border: none;
+  border-left: 0.50rem solid;
+  border-color: #86A9E6;
 }
 
-.container-fluid {
-  background-color: #fff;
+.info {
+  border: none;
+  border-left: 0.50rem solid;
 }
 
-label {
-  margin-right: 2%;
+label, p, h2, b, h4, h5, h3 {
+  border: none;
+  margin-left: 30px;
 }
 
-mat-form {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.half-width {
-  width: 50%;
-  margin-right: 5px;
-}
-
-.half-widthInfo {
-  width: 50%;
-  margin-right: 5px;
-  border-left: solid;
-}
-
-p {
-  color: #000000;
-}
-
-h5, h2 {
+h2, h4 {
   color: #86A9E6;
 }
 
-button {
-  margin-bottom: 5%;
+.jobTitle {
+  background-color: white;
 }
 
-.container-coordonnees {
+.container-fluid {
+  background-color: white;
+}
+
+p {
+  font-size: 10px;
+}
+
+.containerCordonnees {
   position: absolute;
   right: 20px;
   width: 40%;
-  top: 610px;
+  top: 400px;
   float: right;
 }
-
-#btn__boutonAjoutCandidat {
-  color: #fff;
-  background-color: #7F2987;
-}
-
-#btn__boutonCancelCandidat {
-  color: #5E5E5E;
-  background-color: #CBCBCB;
-}
-
-#btn__boutonAjoutCandidat:hover {
-  cursor: pointer;
-  -webkit-filter: brightness(85%);
-          filter: brightness(85%);
-}
-
-#btn__boutonCancelCandidat:hover {
-  cursor: pointer;
-  -webkit-filter: brightness(85%);
-          filter: brightness(85%);
-}
-/*# sourceMappingURL=form-ajout-candidat.component.css.map */
+/*# sourceMappingURL=fiche-candidat.component.css.map */

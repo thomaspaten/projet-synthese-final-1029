@@ -1,0 +1,57 @@
+@import '../../styles.sass'
+@import '../../styles_mixin'
+@import '../../styles_mediaQuerry'
+
+
+
+button
+    display: inline-flex
+    justify-content: space-around
+    margin: 15px
+   
+
+#btn
+    &__button1
+        @include navbar_button
+        border-color: $c-iconSupp
+        color: $c-iconSupp
+    &__button2
+        @include navbar_button
+        border-color: $c-iconMAJ-primaire
+        color: $c-iconMAJ-primaire
+    &__button3
+        @include navbar_button
+        border-color: $c-iconCheck
+        color: $c-iconCheck
+    &__button4
+        @include navbar_button
+        border-color: $c-iconSupp
+        color: $c-iconSupp
+
+        
+   
+    
+#btn__button1:hover
+    @include hover_button
+    
+
+#btn__button2:hover
+    @include hover_button
+    
+
+#btn__button3:hover
+    @include hover_button
+    
+
+#btn__button4:hover
+    @include hover_button
+    
+
+
+@media screen and (max-width: 800px) 
+    button
+        size: 0.5rem
+
+@media screen and (min-width: 576px)
+    button
+        size: 1rem

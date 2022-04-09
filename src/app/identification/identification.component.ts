@@ -7,7 +7,7 @@ import { IdentificationService } from '../identification.service';
   styleUrls: ['./identification.component.sass']
 })
 export class IdentificationComponent implements OnInit {
- nomEtPrenom = this.IdentificationService.obtenirNomEtPrenom()?.value;
+ nomEtPrenom = this.IdentificationService.obtenirNomEtPrenom();
 
   constructor(
     private IdentificationService: IdentificationService
