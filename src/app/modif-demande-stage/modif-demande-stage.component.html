@@ -63,9 +63,9 @@
                     <label for="region">Region</label><br>
                     <select name="region" id="region" required>
                         <option selected>{{demande.region}}</option>
-                        <option>Secteur 1</option>
-                        <option>Secteur 2</option>
-                        <option>Secteur 3</option>
+                        <option>Region 1</option>
+                        <option>Region 2</option>
+                        <option>Region 3</option>
                     </select>
                 </div>
             </div>
@@ -150,7 +150,7 @@
         </div>        
         <div class="pt-4 pb-5 pr-5 float-right">
             <button class="btn btn-secondary mr-3" (click)="goBack()">Annuler</button>
-            <button type="submit" class="btn btn-primary"><mat-icon class="mr-1">save</mat-icon> Mettre à jour</button>
+            <button (click)="onSave(demandeForm)" type="submit" class="btn btn-primary"><mat-icon class="mr-1">save</mat-icon> Mettre à jour</button>
         </div>
     </form>
 </ng-container>

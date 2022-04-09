@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <h6>{{titre}}</h6>
-                <h3>{{demande.title}}</h3>
+                <h4>{{demande.title}}</h4>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="container pt-5">
         <div class="row">
             <div class="col-12 col-sm-6 form-group demande-border">
-                <p>{{demande.studentName}}</p>
+                <h3>{{demande.studentName}}</h3>
             </div>
         </div>
     </div>
@@ -53,23 +53,19 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
-                <label for="region">Region</label><br>
-                <p name="region">{{demande.region}}</p>
-            </div>
-        </div>
-    </div>
-    <div class="container pt-3">
-        <div class="row">
-            <div class="col-12 col-sm-6 form-group">
                 <label for="competence">Compétence</label><br>
                 <p name="competence">{{demande.skills}}</p>
+            </div>
+            <div class="col-12 col-sm-6 form-group">
+                <label for="region">Region</label><br>
+                <p name="region">{{demande.region}}</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h6>Information sur le stage recherché</h6>
+                <h5>Information sur le stage recherché</h5>
             </div>
         </div>
     </div>
@@ -108,7 +104,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 form-group">
-                <label for="infoSupp">Information supplémentaires</label><br>
+                <h5 for="infoSupp">Information supplémentaires</h5><br>
                 <p name="infoSupp">{{demande.additionalInfo}}</p>
             </div>
         </div>

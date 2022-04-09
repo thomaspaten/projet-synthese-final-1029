@@ -11118,3 +11118,19 @@ p {
 .btn__supp {
   color: #F26689;
 }
+
+div label {
+  color: #5E5E5E;
+  font-weight: bold;
+  border-left-color: blue;
+}
+
+h3 {
+  color: #089DA4;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h5 {
+  color: #089DA4;
+}
