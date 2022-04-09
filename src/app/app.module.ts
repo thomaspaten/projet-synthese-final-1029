@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CandidatService } from './candidat.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon'
+import { MatDialogModule } from '@angular/material/dialog' ;'@material/button';
 
 
 
@@ -23,6 +24,7 @@ import { MessageserviceComponent } from './messageservice/messageservice.compone
 import { OffreDetailComponent } from './offre-detail/offre-detail.component';
 import { MajOffreStageComponent } from './maj-offre-stage/maj-offre-stage.component';
 import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.component';
+import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/confirm-dialog-offrestage.component';
 
 // const appRoute: Routes = [
 //   {path: 'liste', component: ListeOffresStagesComponent},
@@ -37,7 +39,7 @@ import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.
     MessageserviceComponent,
     OffreDetailComponent,
     MajOffreStageComponent,
-    AjoutOffreStageComponent,
+    AjoutOffreStageComponent
   ],
   imports: [
     BrowserModule,
@@ -47,14 +49,18 @@ import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.
     HttpClientModule,
     MatFormFieldModule,
     FormsModule,
+    ReactiveFormsModule,
     MatTableModule,
     MatListModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
     
     
   ],
   providers: [CandidatService, OffreStageService],
+  // declarations: [AppComponent, ConfirmDialogOffrestageComponent],
+  entryComponents: [ConfirmDialogOffrestageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -77,17 +77,17 @@
         <td mat-cell *matCellDef="let offre of offrestage">
           <div class="actions__wrapper">
             <!-- Ce bouton permet d'accèder à la vue d'un stage  -->
-            <a class="actions__link" routerLink="/offre/{{ offre._id }}"
-              ><mat-icon>remove_red_eye</mat-icon></a
-            >
+            <button class="actions__link" routerLink="/offre/{{ offre._id }}">
+              <mat-icon>remove_red_eye</mat-icon>
+            </button>
             <!-- Ce bouton permet d'accèder au formulaire pour la mise à jour d'un stage  -->
-            <a class="" routerLink="/maj-offre/{{ offre._id }}" href="#"
-              ><mat-icon class="actions__link--maj">update</mat-icon></a
-            >
+            <button class="" routerLink="/maj-offre/{{ offre._id }}" href="#">
+              <mat-icon class="actions__link--maj">update</mat-icon>
+            </button>
             <!-- Ce bouton permet de supprimer un stage  -->
-            <a href="#"
-              ><mat-icon class="actions__link--delete">delete</mat-icon></a
-            >
+            <button (click)="confirmDialog()" href="#">
+              <mat-icon class="actions__link--delete">delete</mat-icon>
+            </button>
           </div>
         </td>
       </ng-container>
