@@ -4,20 +4,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table';
-import { MatListModule } from '@angular/material/list';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatListModule} from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon'
+import { MatDialogModule } from '@angular/material/dialog' ;'@material/button';
+
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { OffreStageService } from './offre-stage.service';
+import { MessageserviceComponent } from './messageservice/messageservice.component';
+import { OffreDetailComponent } from './offre-detail/offre-detail.component';
+import { MajOffreStageComponent } from './maj-offre-stage/maj-offre-stage.component';
+import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // Composants
@@ -40,8 +47,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormMajCandidatComponent } from './form-maj-candidat/form-maj-candidat.component';
-import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ListeDesCandidatsComponent } from './liste-des-candidats/liste-des-candidats.component';
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { EntreprisesDetailsComponent } from './entreprises-details/entreprises-details.component';
@@ -53,8 +58,13 @@ import { CandidatService } from './candidat.service';
 import { IdentificationService } from './identification.service';
 import { EntreprisesService } from './entreprises.service';
 import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.component';
+import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
+import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/confirm-dialog-offrestage.component';
 
-
+// const appRoute: Routes = [
+//   {path: 'liste', component: ListeOffresStagesComponent},
+//   {path: 'liste/view/:id', component: VueOffreStageComponent},
+// ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +76,11 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
     AccueilComponent,
     ListeDesCandidatsComponent,
     FormAjoutCandidatComponent,
+    ListeOffresStagesComponent,
+    MessageserviceComponent,
+    OffreDetailComponent,
+    MajOffreStageComponent,
+    AjoutOffreStageComponent,
     FicheCandidatComponent,
     SidebarComponent,
     NavbarComponent,
@@ -94,8 +109,12 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
     MatMenuModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatTableModule,
+    MatListModule,
+    MatInputModule,
+    MatDialogModule,
     HttpClientModule,
     NgbModule,
     FontAwesomeModule,
@@ -103,13 +122,14 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
     FormsModule,
     MatCheckboxModule,
     MatListModule
-  ],  
-  providers: [EntreprisesService,CandidatService,IdentificationService, DemandeStageService],
+    
+  ],
+  entryComponents: [ConfirmDialogOffrestageComponent],
+  bootstrap: [AppComponent], 
+  providers: [EntreprisesService,CandidatService,IdentificationService, DemandeStageService, OffreStageService],
 
   // schemas:[ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   // a remettre candidatService dans providers apres
-
-  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {

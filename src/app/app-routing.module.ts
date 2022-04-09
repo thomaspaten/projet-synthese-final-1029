@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.component';
+import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
+import { MajOffreStageComponent } from './maj-offre-stage/maj-offre-stage.component';
+import { OffreDetailComponent } from './offre-detail/offre-detail.component';
+
 import { AjoutDemandeStageComponent } from './ajout-demande-stage/ajout-demande-stage.component';
 import { ModifDemandeStageComponent } from './modif-demande-stage/modif-demande-stage.component';
 import { VoirDemandeStageComponent } from './voir-demande-stage/voir-demande-stage.component';
@@ -19,7 +24,6 @@ const routes: Routes = [
   { path: 'voirDemande/:_id', component: VoirDemandeStageComponent},
   { path: 'modifDemande/:_id', component: ModifDemandeStageComponent},
   { path: 'tableDemande', component: TableDemandeStageComponent},
-
   { path: 'candidats', component: ListeDesCandidatsComponent },
   { path: 'candidat/:_id', component: FicheCandidatComponent  },
   { path: 'update/:id', component: FormMajCandidatComponent },
@@ -30,7 +34,11 @@ const routes: Routes = [
   { path: 'entreprises', component: EntreprisesComponent },
   { path: 'entreprises-details', component: EntreprisesDetailsComponent },
   { path: 'form-ajout-candidat', component: FormAjoutCandidatComponent },
-  {path: 'ajout-entreprise', component: AjoutEntrepriseComponent}
+  {path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
+  { path: 'offres', component: ListeOffresStagesComponent },
+  { path: 'offre/:_id', component: OffreDetailComponent},
+  { path: 'maj-offre/:_id', component: MajOffreStageComponent},
+  { path: 'ajout-offre', component: AjoutOffreStageComponent}
 ]
 
     // ici il va falloir ajouter les routes du sidebar pour que chacuns des boutons renvoient à la bonne page
