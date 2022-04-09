@@ -1,28 +1,37 @@
 /*J'ai utilisé le flexbox pour aligner les elements de ma carte */
-
-.mat-card 
-  display: inline-flex
-  padding: center
-  width: 350px
-  margin-bottom: 3rem
-  justify-content: space-between
-  margin: 45px
+@import '../../styles.sass'
+@import '../../styles_mixin'
 
 
+.liste-card
+    display: inline-flex
+    justify-content: space-around
+    margin: 15px
 
 
-.mat-card-title
+
+
+mat-card-title
     display: flex
-    justify-content: start
+    justify-content: flex-start
 
-.mat-card-subtitle
-    display: flex
+mat-card-content
+    display: inline-flex
     justify-content: center
 
 
-    
+.btn
+    &__button4
+        @include navbar_button
+        border-color: $c-iconCheck
+        color: $c-iconCheck
+        
+.btn__button4:hover
+    @include hover_button
 
     
+
+  
 
 
 
