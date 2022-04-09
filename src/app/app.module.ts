@@ -22,7 +22,6 @@ import { ListeDesCandidatsComponent } from './liste-des-candidats/liste-des-cand
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { EntreprisesDetailsComponent } from './entreprises-details/entreprises-details.component';
 import { IdentificationComponent } from './identification/identification.component';
-import { LoginComponent } from './login/login.component';
 
 // Services
 
@@ -41,7 +40,6 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
     EntreprisesComponent,
     EntreprisesDetailsComponent,
     IdentificationComponent,
-    LoginComponent,
     AjoutEntrepriseComponent
   ],
   imports: [
