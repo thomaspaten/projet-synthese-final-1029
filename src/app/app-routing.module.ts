@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: '+ Ajouter un candidat', component: FormAjoutCandidatComponent },
   { path: 'Candidats', component: ListeDesCandidatsComponent },
 
-
-
+    // ici il va falloir ajouter les routes du sidebar pour que chacuns des boutons renvoient à la bonne page
+    // va falloir aussi rajouter les bonnes références dans la page sidebar.componant.html    
 
 
 ]

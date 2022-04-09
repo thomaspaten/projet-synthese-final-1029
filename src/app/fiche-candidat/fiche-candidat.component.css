@@ -1,24 +1,21 @@
 form {
-  margin-left: 10rem;
+  margin-left: 5rem;
 }
 
-.fiche_candidat1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-label {
+label, p, h2 {
   border: none;
   border-left: solid;
 }
 
-.presentaion {
-  border: solid;
-  border-radius: 2px;
+.jobTitle {
+  background-color: white;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+p {
+  font-size: 10px;
 }
 /*# sourceMappingURL=fiche-candidat.component.css.map */

@@ -26,45 +26,63 @@
 
 <form *ngIf="candidat">
 
-          <h3>Nom complet: </h3>
-          <label>{{candidat.name}}</label>
+          <h5>Candidat</h5>
+          <label><h2>{{candidat.name}}</h2></label>
+         
+           
+
+          <label class="jobTitle">{{candidat.jobTitle}}</label>
+
           <br>
           <br>
-     
-          <h3>Présentation</h3>
-          <label>{{candidat.description}}</label>
+
+          <div class="container-fluid">
+          <h2>Courte présentation</h2>
+          <label><p>{{candidat.description}}</p></label> 
           
 
           <br>
-          <div class="fiche_candidat1"> 
-          <h3>Titre du job: </h3>
-          <label>{{candidat.jobTitle}}</label>
-      
+          <h4>Informations personnelles</h4>
 
-          <br>
-          <h3>Adresse: </h3>
+            <div class="row">
+
+
+          <b>Adresse: </b>
+          <div class="col-md-4">
           <label>{{candidat.address}}</label>
-        
-
-          <br>
-          <h3>Ville: </h3>
-          <label>{{candidat.city}}</label>
-       
-
-          <br>
-          <h3>Code postal </h3>
-          <label>{{candidat.postalCode}}</label>
-         
-        
-          <br>
-          <h3>Téléphone: </h3>
-          <label>{{candidat.phone}}</label>
-        
-          <br>
-          <h3>Email: </h3>
-          <label>{{candidat.email}}</label>
           </div>
-    
+        
+          <b>Ville: </b>
+          <div class="col-md-4">
+          <label>{{candidat.city}}</label>
+          </div>
+
+          <b>Province: </b>
+          <div class="col-md-4">
+          <label>{{candidat.province}}</label>
+          </div>
+
+
+
+          <b>Code postal </b>
+          <div class="col-md-4">
+          <label>{{candidat.postalCode}}</label>
+          </div>
+
+
+          <b>Téléphone: </b>
+          <div class="col-md-4">
+          <label>{{candidat.phone}}</label>
+          </div>
+
+
+
+          <b>Email: </b>
+          <div class="col-md-4">
+          <label>{{candidat.email}}</label>
+        </div>
+            </div>
+        </div>
       </form>
 
       <br>
