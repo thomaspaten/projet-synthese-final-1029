@@ -1,85 +1,44 @@
 
-<div class="container" >
+<div class="container-fluid c-gris-pale  " >
+<div class="container ">
 
-<li *ngFor="let entreprise of entreprises">{{entreprise.name}}</li>
 
-  <div class="row mx-lg-3 my-5">
-    <div class="col-12">  <h1 class="mx-lg-5">Insérer adress</h1></div>
+  <div class="row py-5 ">
+    <div class="col-12"><h1>Entreprise</h1></div>
   </div>
-  <div class="row mx-lg-3 my-4">
+  <div class="row pb-3">
     <div class="col-12">
-      <button type="button" class="btn btn-primary mx-lg-5">Ajouter une entreprise</button>
+      <button type="button" class="btn btn-primary">Ajouter une entreprise</button>
     </div>
-
   </div>
-
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-5 card me-lg-3 my-3 p-5 border-0 ">
-      <div class="row  ">
-        <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center">
-          <img src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-12 col-md-8 ps-lg-4">
-          <div class="card-body">
-            <h5 class="card-title">Me</h5>
-            <p class="card-text">Insérer adresse</p>
-            <p class="card-text">Insérer téléphone</p>
-            <p class="card-text">Insérer télécopieur</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-lg-5 card ms-lg-3 my-3 p-5 border-0">
-      <div class="row  ">
-        <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center">
-          <img src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-12 col-md-8 ps-lg-4">
-          <div class="card-body">
-            <h5 class="card-title">Mediavox</h5>
-            <p class="card-text">Insérer adresse</p>
-            <p class="card-text">Insérer téléphone</p>
-            <p class="card-text">Insérer télécopieur</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<div class="row">
   </div>
-
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-5 card me-lg-3 my-3 p-5 border-0 ">
-      <div class="row  ">
-        <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center">
-          <img src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
+  <div  class="row">
+    <div *ngFor="let entreprise of entreprises" class="col-sm-6">
+    <div class="card mb-3 p-5">
+      <div class="row g-0">
+        <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center align-items-center ps-lg-5">
+          <img class="" src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
         </div>
-        <div class="col-12 col-md-8 ps-lg-4">
+
+        <div class="col-12 col-md-8 ps-lg-5">
           <div class="card-body">
-            <h5 class="card-title">Mediavox</h5>
-            <p class="card-text">Insérer adresse</p>
-            <p class="card-text">Insérer téléphone</p>
-            <p class="card-text">Insérer télécopieur</p>
+            <h2 class="card-title">{{ entreprise.name }}</h2>
+            <p class="card-text small-text small-text-c-med-gris">{{ entreprise.city }}</p>
+            <p class="card-text small-text small-text-c-med-gris">{{ entreprise.province }}</p>
+            <p class="card-text small-text small-text-c-med-gris mb-4">{{ entreprise.address }}</p>
+
+            <p class="card-text small-text small-text-c-med-gris">Téléphone : {{ entreprise.contactPhone }}</p>
+            <!-- Le champ télécopieur n'existe pas dans les données donc j'ai mis le courriel à la place. -->
+            <p class="card-text small-text small-text-c-med-gris"> Courriel :{{ entreprise.contactEmail }}</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-12 col-lg-5 card ms-lg-3 my-3 p-5 border-0 ">
-      <div class="row  ">
-        <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center">
-          <img src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-12 col-md-8 ps-lg-4">
-          <div class="card-body">
-            <h5 class="card-title">Mediavox</h5>
-            <p class="card-text">Insérer adresse</p>
-            <p class="card-text">Insérer téléphone</p>
-            <p class="card-text">Insérer télécopieur</p>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
+<!-- row end -->
+</div>
 
-  </div>
 
 
 </div>
