@@ -8,13 +8,11 @@
 <button mat-raised-button class="btn btn-info" style="float: right; "  (click)="editCandidat(candidat._id)"><mat-icon>update</mat-icon></button>
 <button mat-raised-button class="btn btn-info" style="float: right; "  (click)="deleteCandidat(candidat._id)"><mat-icon>delete</mat-icon></button>
 
-<!-- action modal -->
-
-<!-- test modal 1 -->
+<!-- action modal non fonctionnelle/en attente de test-->
 
 <!-- <button mat-raised-button class="btn btn-info" (click)="openConfirmationDialog()"><b>Delete me</b></button> -->
 <!-- test modal 2 -->
-<button mat-raised-button class="btn btn-info" (click)="openDialog()"><b>Delete moi</b></button>
+<!-- <button mat-raised-button class="btn btn-info" (click)="openDialog()"><b>Delete moi</b></button> -->
 
 
 
@@ -26,13 +24,11 @@
 
 <form *ngIf="candidat">
 
-          <h5>Candidat</h5>
-          <label><h2>{{candidat.name}}</h2></label>
-         
-           
-
+          <div class="entete">
+          <b>Candidat</b>
+          <label><h3>{{candidat.name}}</h3></label>
           <label class="jobTitle">{{candidat.jobTitle}}</label>
-
+          </div>
           <br>
           <br>
 
@@ -44,45 +40,41 @@
           <br>
           <h4>Informations personnelles</h4>
 
-            <div class="row">
+
+              <div class="info">
+              <b>Adresse: </b>
+              <label><p>{{candidat.address}}</p></label>
+              </div>
+            
+              <div class="info">
+              <b>Ville: </b>
+              <label><p>{{candidat.city}}</p></label>
+              </div>
+
+              <div class="info">
+              <b>Province: </b>
+              <label><p>{{candidat.province}}</p></label>
+              </div>
 
 
-          <b>Adresse: </b>
-          <div class="col-md-4">
-          <label>{{candidat.address}}</label>
-          </div>
-        
-          <b>Ville: </b>
-          <div class="col-md-4">
-          <label>{{candidat.city}}</label>
-          </div>
+              <div class="info">
+              <b>Code postal </b>
+              <label><p>{{candidat.postalCode}}</p></label>
+              </div>
 
-          <b>Province: </b>
-          <div class="col-md-4">
-          <label>{{candidat.province}}</label>
-          </div>
+              <div class="containerCordonnees">
+              <div class="info">
+              <b>Téléphone: </b>
+              <label><p>{{candidat.phone}}</p></label>
+              </div>
 
 
-
-          <b>Code postal </b>
-          <div class="col-md-4">
-          <label>{{candidat.postalCode}}</label>
-          </div>
-
-
-          <b>Téléphone: </b>
-          <div class="col-md-4">
-          <label>{{candidat.phone}}</label>
-          </div>
-
-
-
-          <b>Email: </b>
-          <div class="col-md-4">
-          <label>{{candidat.email}}</label>
-        </div>
+              <div class="info">
+              <b>Email: </b>
+              <label><p>{{candidat.email}}</p></label>
             </div>
-        </div>
+            </div>
+          </div>
       </form>
 
       <br>

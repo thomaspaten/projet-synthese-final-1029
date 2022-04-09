@@ -63,5 +63,6 @@ mat-toolbar {
 .content {
   margin: 16px;
   margin-left: 32px;
+  overflow: hidden;
 }
 /*# sourceMappingURL=app.component.css.map */

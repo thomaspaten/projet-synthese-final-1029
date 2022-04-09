@@ -55,11 +55,17 @@ form {
   margin-left: 60px;
 }
 
-.container-fluid {
+.container {
   display: -ms-grid;
   display: grid;
-  width: 150%;
-  padding: 5%;
+}
+
+.container-fluid {
+  background-color: #fff;
+}
+
+label {
+  margin-right: 2%;
 }
 
 mat-form {
@@ -68,18 +74,35 @@ mat-form {
   display: inline-flex;
 }
 
-input {
-  border: none;
+.half-width {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.half-widthInfo {
+  width: 50%;
+  margin-right: 5px;
   border-left: solid;
 }
 
-.half-width {
-  width: 45%;
-  margin-right: 10px;
+p {
+  color: #000000;
 }
 
-p {
-  color: black;
+h5, h2 {
+  color: #86A9E6;
+}
+
+button {
+  margin-bottom: 5%;
+}
+
+.container-coordonnees {
+  position: absolute;
+  right: 20px;
+  width: 40%;
+  top: 610px;
+  float: right;
 }
 
 #btn__boutonAjoutCandidat {

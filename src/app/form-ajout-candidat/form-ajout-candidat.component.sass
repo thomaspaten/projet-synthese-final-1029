@@ -1,31 +1,58 @@
 @import '../../styles.sass'
 @import '../../styles_mixin'
 
+
+
+   
 form
     min-width: 150px
     margin-left: 60px
- 
 
+ 
+.container
+    display: grid
+    // width: 150%
 
 .container-fluid
-    display: grid
-    width: 150%
-    padding: 5%
+    background-color: $c-blanc
+    
+
+label
+    margin-right: 2%
 
 mat-form
     display: inline-flex
-    
-input
-    border: none
+
+  
+
+.half-width
+    width: 50%
+    margin-right: 5px
+
+.half-widthInfo
+    width: 50%
+    margin-right: 5px
     border-left: solid
 
-    
-.half-width
-    width: 45%
-    margin-right: 10px
-
 p
-    color: black
+    color: $c-noir
+
+
+h5, h2
+    color: $c-bleu
+
+
+button
+    margin-bottom: 5%
+
+// disposition des cases relatives aux infos personnelles
+.container-coordonnees
+    position: absolute
+    right: 20px
+    width: 40%
+    top: 610px
+    float: right
+
 
 
 #btn
@@ -52,10 +79,3 @@ p
 
 
 
-
-.container-info-perso
-  
-// .container-contact
-//     display: flex
-//     align-content: center
-   
