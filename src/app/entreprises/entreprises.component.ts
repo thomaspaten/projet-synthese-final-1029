@@ -2,7 +2,7 @@
 
 import { Component,OnInit } from '@angular/core';
 import { EntreprisesService } from '../entreprises.service';
-import { Entreprise } from '../entreprise';
+import { Entreprise } from './entreprise';
 
 @Component({
   selector: 'app-entreprises',
@@ -15,8 +15,9 @@ export class EntreprisesComponent implements OnInit {
   entreprises: Entreprise[] = []
   constructor(private entreprisesService: EntreprisesService) {}
 
+  // get observedAttributes()
   ngOnInit(): void {
-    this.obtenirEntreprises
+    this.obtenirEntreprises()
   }
   obtenirEntreprises(): void{
     this.entreprisesService.ObtenirEntreprises().subscribe(donnee => {this.entreprises = donnee; console.log("ping de entreprises.ts")})
