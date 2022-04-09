@@ -43,9 +43,9 @@
                 <ng-container matColumnDef="actions">
                     <th mat-header-cell *matHeaderCellDef> </th>
                     <td mat-cell *matCellDef="let demandestages of tableauDemandeStages" class="boutonsAction">
-                        <a href="#" routerLink="/voirDemande/{{demandestages._id}}"><fa-icon [icon]="voir"></fa-icon></a>
-                        <a routerLink="/modifDemande/{{demandestages._id}}"><fa-icon [icon]="modifier"></fa-icon></a>
-                        <button><fa-icon [icon]="suppression"></fa-icon></button>
+                        <button class="btn btn__voir" routerLink="/voirDemande/{{demandestages._id}}"><fa-icon [icon]="voir"></fa-icon></button>
+                        <button class="btn btn__edit" routerLink="/modifDemande/{{demandestages._id}}"><fa-icon [icon]="modifier"></fa-icon></button>
+                        <button class="btn btn__supp"><fa-icon [icon]="suppression"></fa-icon></button>
                     </td>
                 </ng-container>
 

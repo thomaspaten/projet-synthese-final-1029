@@ -6,10 +6,10 @@
             </div>
         </div>
     </div>        
-    <form class="pt-5">
+    <form class="pt-5" #demandeAjoutForm="ngForm">
         <div class="pr-5 float-right">
-            <button type="reset" class="btn btn-secondary mr-3">Annuler</button>
-            <button type="submit" class="btn btn-primary"><mat-icon class="mr-1">save</mat-icon> Sauvegarder </button>
+            <button type="reset" class="btn btn-secondary mr-3" (click)="goBack()">Annuler</button>
+            <button type="submit" class="btn btn-primary"><mat-icon class="mr-1" (click)="onSave(demandeAjoutForm)">save</mat-icon> Sauvegarder </button>
         </div>
         <div class="container pt-5">
             <div class="row">

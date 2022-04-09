@@ -4,6 +4,7 @@ import { DemandeStageService } from '../demande-stage.service';
 import { DemandeStage } from '../demande-stages';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-ajout-demande-stage',
   templateUrl: './ajout-demande-stage.component.html',
@@ -19,9 +20,27 @@ export class AjoutDemandeStageComponent implements OnInit {
     activitySector: '', city: '', linkToResume: ''
   }
 
-  constructor() { }
+  @Output() majTableau = new EventEmitter
+
+  constructor(
+    private demandeStageService: DemandeStageService,
+    private router: ActivatedRoute,
+    private location: Location
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  onSave(demandeAjoutForm: NgForm) {
+    if(demandeAjoutForm.valid){
+      if(!this.demande._id){
+        this.demandeStageService.ajoutDemandeStage(this.demande).subscribe(_ => {this.majTableau.emit()});
+      }
+    }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

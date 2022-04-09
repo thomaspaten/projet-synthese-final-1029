@@ -1,5 +1,5 @@
 <ng-container *ngIf="demande">
-    <div class="container pt-5">
+    <div class="container pt-5 demande-view">
         <div class="row">
             <div class="col-12">
                 <h6>{{titre}}</h6>
@@ -8,22 +8,21 @@
         </div>
     </div>
     <div class="pr-5 float-right">
-        <button type="reset" class="btn btn-secondary mr-3">Annuler</button>
-        <button type="submit" class="btn btn-primary"><mat-icon class="mr-1">save</mat-icon> Sauvegarder </button>
+        <button class="btn btn__check"><mat-icon (click)="goBack()">check</mat-icon></button>
+        <button class="btn btn__edit"><mat-icon routerLink="/modifDemande/{{demande._id}}">edit</mat-icon> </button>
+        <button class="btn btn__supp"><mat-icon (click)="suppDemande(demande)">cancel</mat-icon></button>
     </div>        
     <div class="container pt-5">
         <div class="row">
-            <div class="col-12 col-sm-6 form-group">
-                <label for="candidat">Nom et prénom</label><br>
-                <input type="text" name="candidat" size="100" disabled>
+            <div class="col-12 col-sm-6 form-group demande-border">
+                <p>{{demande.studentName}}</p>
             </div>
         </div>
     </div>
     <div class="container pt-3">
         <div class="row">
-            <div class="col-12 col-sm-6 form-group">
-                <label for="presentation">Présentation</label><br>
-                <textarea type="text" name="presentation" cols="100" rows="5" disabled></textarea>
+            <div class="col-12 form-group">                
+                <p>{{demande.studentPresentation}}</p>
             </div>
         </div>
     </div>
@@ -31,11 +30,11 @@
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
                 <label for="programme">Programme de formation</label><br>
-                <input type="text" id="programme" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>
+                <p name="programme">{{demande.program}}</p>
             </div>
             <div class="col-12 col-sm-6 form-group">
                 <label for="ecole">Établissement scolaire</label><br>
-                <input type="text" id="ecole" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>
+                <p name="ecole">{{demande.school}}</p>
             </div>
         </div>
     </div>
@@ -43,11 +42,11 @@
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
                 <label for="secteurActivite">Secteur d'activité</label><br>
-                <input type="text" id="ville" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>
+                <p name="secteurActivite">{{demande.activitySector}}</p>
             </div>
             <div class="col-12 col-sm-6 form-group">
                 <label for="ville">Ville</label><br>
-                <input type="text" id="ville" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>
+                <p name="ville">{{demande.city}}</p>
             </div>
         </div>
     </div>               
@@ -55,7 +54,7 @@
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
                 <label for="region">Region</label><br>
-                <input type="text" id="ville" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>
+                <p name="region">{{demande.region}}</p>
             </div>
         </div>
     </div>
@@ -63,7 +62,7 @@
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
                 <label for="competence">Compétence</label><br>
-                <textarea type="text" name="competence" cols="100" rows="5" disabled></textarea>
+                <p name="competence">{{demande.skills}}</p>
             </div>
         </div>
     </div>
@@ -78,40 +77,39 @@
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
                 <label for="typeStage">Type de stage</label><br>
-                <input type="text" id="ville" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>
+                <p name="typeStage">{{demande.stageType}}</p>
             </div>
             <div class="col-12 col-sm-6 form-group">
                 <label for="dateDebut">Date de début</label><br>
-                <input type="text" id="dateDebut" placeholder="" disabled>
+                <p name="dateDebut">{{demande.startDate | date : 'yyyy-MM-dd'}}</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
-                <label for="langage">Nombre d'heure par semaine</label><br>
-                <input type="text" id="ville" placeholder="" pattern="[a-zA-Z][a-zA-Z\s]*" disabled>                            
+                <label for="nbrHeure">Nombre d'heure par semaine</label><br>
+                <p name="nbrHeure">{{demande.hoursPerWeek}} heures par semaine</p>
             </div>
             <div class="col-12 col-sm-6 form-group">
                 <label for="dateFin">Date de fin</label><br>
-                <input type="text" id="dateFin" placeholder="" disabled>
+                <p name="datefin">{{demande.endDate| date : 'yyyy-MM-dd'}}</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 form-group">
-                <h6 class="pb-2">Rémunération</h6>
-                <input class="mr-3" type="text" id="choixEntreprise" placeholder="" disabled>
-                <label for="choixEntreprise">À la discrétion de l'entreprise</label><br>
+                <label for="remuneration">Rémunération</label><br>
+                <p name="remuneration">{{demande.paid}}</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 form-group">
+            <div class="col-12 form-group">
                 <label for="infoSupp">Information supplémentaires</label><br>
-                <textarea type="text" name="infoSupp" cols="100" rows="5" disabled></textarea>
+                <p name="infoSupp">{{demande.additionalInfo}}</p>
             </div>
         </div>
     </div>

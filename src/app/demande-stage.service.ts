@@ -33,7 +33,7 @@ export class DemandeStageService {
     return this.http.put<DemandeStage>(url, demandeStage, httpOptions);
   }
 
-  supprDemandestage(demandeStage: DemandeStage): Observable<DemandeStage> {
+  supprDemandeStage(demandeStage: DemandeStage): Observable<DemandeStage> {
     const url = `${this.demandeStageUrl}/${demandeStage._id}`;
     return this.http.delete<DemandeStage>(url);
   }

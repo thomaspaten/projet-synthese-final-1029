@@ -1,6 +1,6 @@
 /* Importation du style global */
 
-@import '../../../css/styles'
+@import '../../styles'
 
 /** Déclaration des variables de couleurs **/
 
@@ -29,14 +29,9 @@ $couleurs: ("orange": orange, "gris": $c-gris, "blanc": white, "noir": black, "r
         &#{$couleur}
             color: $i
 
-/* Styliser le tableau */ 
+$icons: ("voir": $c-iconVue, "edit": $c-iconMAJ-primaire, "supp": $c-iconSupp)
 
-@mixin mat-table-columns($columns)
-    .mat-column-    
-        @each $matColumnDef, $props in $columns 
-            $width: map-get($props, 'width')
-            &#{$matColumnDef}             
-                flex: $width
-                min-width: $width
-                @if map-has-key($props, 'color')                 
-                    color: map-get($props, 'color')
+@each $icon, $i in $icons
+    .btn__
+        &#{$icon}
+            color: $i

@@ -1,0 +1,11 @@
+/* Importation du style global */
+
+@import '../../styles'
+
+$icons: ("check": $c-iconCheck, "edit": $c-iconMAJ-secondaire, "supp": $c-iconSupp)
+
+@each $icon, $i in $icons
+    .btn__
+        &#{$icon}
+            color: $i
+

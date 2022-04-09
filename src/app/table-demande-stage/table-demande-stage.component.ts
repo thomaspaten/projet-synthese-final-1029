@@ -40,5 +40,8 @@ export class TableDemandeStageComponent implements OnInit {
       .subscribe(tableauDemandeStages => this.tableauDemandeStages = tableauDemandeStages)
   }
 
-  
+  suppDemande(tableauDemandeStages: DemandeStage){
+    this.demandeStageService.supprDemandeStage(tableauDemandeStages)
+    .subscribe(() => (this.tableauDemandeStages = this.tableauDemandeStages));
+  }
 }
