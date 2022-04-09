@@ -5,14 +5,25 @@ import { Injectable } from '@angular/core';
 })
 export class IdentificationService {
 nomEtPrenom: string = '';
-
-ajoutNomEtPrenom(nomEtPrenom: string){
-  this.nomEtPrenom = nomEtPrenom
-  window.alert(`Le nom est : ${nomEtPrenom}`);
+key: string = "utilisateur";
+private useLocalStorage<T>(key: string, value: T) {
+  window.localStorage.setItem(key, JSON.stringify(value));
 }
 
-obtenirNomEtPrenom():string{
-  return this.nomEtPrenom
+private getKeyFromLocalStorage<T = unknown>(key: string): T | null {
+  if (window.localStorage.getItem(key)) {
+    return JSON.parse(window.localStorage.getItem(key)!) as T;
+  }
+
+  return null;
+}
+ajoutNomEtPrenom(nomEtPrenom: string){
+  this.nomEtPrenom = nomEtPrenom
+  this.useLocalStorage(this.key, { value: this.nomEtPrenom })
+}
+
+obtenirNomEtPrenom(): any{
+  return this.getKeyFromLocalStorage(this.key);
 }
 
 
