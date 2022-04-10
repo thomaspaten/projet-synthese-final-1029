@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,2CAA2C;CAE9D",
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,gBAAgB,EAAE,2CAA2C;CAAG",
     "sources": [
-        "accueil.component.scss"
+        "accueil.component.sass"
     ],
     "names": [],
     "file": "accueil.component.css"

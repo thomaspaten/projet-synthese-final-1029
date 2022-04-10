@@ -15,11 +15,15 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EntreprisesService {
-
-  EntreprisessURL = 'https://projet-synthese-api.herokuapp.com/api/2096335/enterprise';
+  URL = 'https://projet-synthese-api.herokuapp.com/api/2096335/enterprise';
   constructor(private http: HttpClient) { }
 
   ObtenirEntreprises(): Observable<Entreprise[]> {
-    return this.http.get<Entreprise[]>(this.EntreprisessURL);
+    return this.http.get<Entreprise[]>(this.URL);
   }
+
+  ObtenirEntreprise(_id:number): Observable<any> {
+      return this.http.get<Entreprise>(`${this.URL}/${_id}`);
+    }
+
 }

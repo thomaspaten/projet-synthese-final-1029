@@ -7,11 +7,11 @@ import { IdentificationService } from '../identification.service';
   styleUrls: ['./identification.component.sass']
 })
 export class IdentificationComponent implements OnInit {
- nomEtPrenom = this.IdentificationService.obtenirNomEtPrenom();
+ nomEtPrenom = this.IdentificationService.obtenirNomEtPrenom().value;
 
   constructor(
     private IdentificationService: IdentificationService
-  ) {  console.log(this.nomEtPrenom)}
+  ) {}
 
   ngOnInit(): void {
     this.nomEtPrenom;
