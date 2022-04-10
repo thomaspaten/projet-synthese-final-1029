@@ -1,4 +1,4 @@
-// Creer par Thomas Patenaude Poulin
+// Creer par : Thomas Patenaude Poulin
 // Ceci est l'interface propre aux entreprises.
 
 export interface Entreprise {

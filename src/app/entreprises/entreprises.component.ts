@@ -2,7 +2,7 @@
 
 import { Component,OnInit } from '@angular/core';
 import { EntreprisesService } from '../entreprises.service';
-import { Entreprise } from './entreprise';
+import { Entreprise } from '../entreprise';
 
 @Component({
   selector: 'app-entreprises',
