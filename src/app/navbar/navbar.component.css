@@ -50,13 +50,19 @@ p {
 }
 
 /* You can add global styles to this file, and also import other style files */
-button {
+ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 15px;
+  margin: 40px;
+  list-style-type: none;
+  width: 100%;
+}
+
+li {
+  font-size: 60%;
 }
 
 #btn__button1 {
@@ -113,17 +119,5 @@ button {
   cursor: pointer;
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
-}
-
-@media screen and (max-width: 800px) {
-  button {
-    size: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  button {
-    size: 1rem;
-  }
 }
 /*# sourceMappingURL=navbar.component.css.map */

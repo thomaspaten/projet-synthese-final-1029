@@ -60,7 +60,7 @@ export class ListeDesCandidatsComponent implements OnInit {
   }
 
     addCandidat() {
-      this.router.navigate(['+ Ajouter un candidat'])
+      this.router.navigate(['ajouter-un-candidat'])
     }
 
   

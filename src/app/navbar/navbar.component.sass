@@ -1,14 +1,19 @@
-@import '../../styles.sass'
+@import '../../styles'
 @import '../../styles_mixin'
 @import '../../styles_mediaQuerry'
 
 
 
-button
+ul
     display: inline-flex
     justify-content: space-around
-    margin: 15px
-   
+    margin: 40px
+    list-style-type: none
+    width: 100%
+
+// ce style contrôle la grandeur du texte et du bouton
+li
+    font-size: 60%
 
 #btn
     &__button1
@@ -48,10 +53,3 @@ button
     
 
 
-@media screen and (max-width: 800px) 
-    button
-        size: 0.5rem
-
-@media screen and (min-width: 576px)
-    button
-        size: 1rem

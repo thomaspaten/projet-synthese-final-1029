@@ -42,6 +42,7 @@ import { CandidatService } from './candidat.service';
 import { IdentificationService } from './identification.service';
 import { EntreprisesService } from './entreprises.service';
 import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
     EntreprisesComponent,
     EntreprisesDetailsComponent,
     IdentificationComponent,
-    AjoutEntrepriseComponent
+    AjoutEntrepriseComponent,
+    NavigationComponent
   ],
   imports: [
     MatDialogModule,
