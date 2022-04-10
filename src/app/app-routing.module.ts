@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'entreprises', component: EntreprisesComponent },
-  // { path: 'entreprises-details/:id', component: EntreprisesDetailsComponent },
+  { path: 'entreprises-details/:_id', component: EntreprisesDetailsComponent },
   { path: 'form-ajout-candidat', component: FormAjoutCandidatComponent },
   {path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
   { path: 'offres', component: ListeOffresStagesComponent },

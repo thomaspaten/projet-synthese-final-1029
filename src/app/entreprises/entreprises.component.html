@@ -12,7 +12,7 @@
   </div>
   <div  class="row">
     <div *ngFor="let entreprise of entreprises" class="col-sm-6">
-    <div class="card mb-3 p-5">
+    <div (click)="(obtenirEntreprise(entreprise._id))" class="card mb-3 p-5">
       <div class="row g-0">
         <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center align-items-center ps-lg-5">
           <img class="" src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
@@ -33,9 +33,9 @@
       </div>
     </div>
 </div>
-<!-- row end -->
 </div>
 
 
 
+</div>
 </div>
