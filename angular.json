@@ -33,11 +33,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [              
+            "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-
               "src/styles.sass",
+              "src/styles-2.sass",
               "node_modules/sweetalert2/src/sweetalert2.scss"
 
             ],
@@ -109,7 +109,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [              
+            "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.sass"

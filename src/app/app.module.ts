@@ -126,10 +126,10 @@ import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/co
     FormsModule,
     MatCheckboxModule,
     MatListModule
-    
+
   ],
   entryComponents: [ConfirmDialogOffrestageComponent],
-  bootstrap: [AppComponent], 
+  bootstrap: [AppComponent],
   providers: [EntreprisesService,CandidatService,IdentificationService, DemandeStageService, OffreStageService],
 
   // schemas:[ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
