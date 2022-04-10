@@ -5,7 +5,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Entreprise } from './entreprise'
+import { Entreprise } from './entreprise';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -26,4 +26,7 @@ export class EntreprisesService {
       return this.http.get<Entreprise>(`${this.URL}/${_id}`);
     }
 
+  AjoutEntreprise(Entreprise: String) : Observable<Entreprise> {
+    return this.http.post<Entreprise>(this.URL, Entreprise, httpOptions);
+  }
 }

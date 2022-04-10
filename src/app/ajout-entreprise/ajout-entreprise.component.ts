@@ -1,5 +1,4 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { CandidatService } from '../candidat.service';
 import { Entreprise } from '../entreprise';
 import { EntreprisesService } from '../entreprises.service';
 
@@ -27,13 +26,18 @@ published: true,
 __v: 0
     };
 
-  constructor(private candidatService: CandidatService) { }
-
-  gererSoumission = () => {
-    console.log(this.entreprise);
-  }
+  constructor(private EntreprisesService: EntreprisesService) { }
 
   ngOnInit(): void {
+  }
+  AjoutEntreprise(): void {
+    this.entreprise._id = "623360587ecfa34056f012f1"
+    let postRequest = JSON.stringify(this.entreprise)
+    this.EntreprisesService.AjoutEntreprise(postRequest).subscribe();
+    console.log(postRequest)
+  }
+  Test(): void {
+    console.log(this.entreprise)
   }
 
 }
