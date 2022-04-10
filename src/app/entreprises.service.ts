@@ -15,7 +15,6 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EntreprisesService {
-
   EntreprisessURL = 'https://projet-synthese-api.herokuapp.com/api/2096335/enterprise';
   constructor(private http: HttpClient) { }
 

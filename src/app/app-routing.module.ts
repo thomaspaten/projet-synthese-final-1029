@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: '', component: AccueilComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'entreprises', component: EntreprisesComponent },
-  { path: 'entreprises-details', component: EntreprisesDetailsComponent },
+  // { path: 'entreprises-details/:id', component: EntreprisesDetailsComponent },
   { path: 'form-ajout-candidat', component: FormAjoutCandidatComponent },
   {path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
   { path: 'offres', component: ListeOffresStagesComponent },
@@ -48,3 +48,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+// Aller chercher entreprise dans API
+// Afficher donnéee réel entreprise
+// Modification donnée et envoi à l'API.
