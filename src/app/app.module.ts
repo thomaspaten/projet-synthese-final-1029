@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon'
 import { MatDialogModule } from '@angular/material/dialog' ;'@material/button';
 
+
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { OffreStageService } from './offre-stage.service';
 import { MessageserviceComponent } from './messageservice/messageservice.component';
@@ -27,11 +28,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
+
 // Composants
 
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { DemandeStageService } from './demande-stage.service';
 import { TableDemandeStageComponent } from './table-demande-stage/table-demande-stage.component';
@@ -116,9 +118,9 @@ import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/co
     MatInputModule,
     MatDialogModule,
     HttpClientModule,
-    NgbModule,
+    // NgbModule,
     FontAwesomeModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     FormsModule,
     MatCheckboxModule,
     MatListModule

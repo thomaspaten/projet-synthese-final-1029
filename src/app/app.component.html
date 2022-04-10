@@ -1,27 +1,10 @@
-<!--Programmée par Rachida Zaoug -->
-<!-- Date de dernière modification: 2022-03-28 -->
 
-<!-- Ce code est responsable de l'apparition su menu humburger lorsque l'écran est réduite -->
-<mat-toolbar>
-  <button
-    mat-icon-button
-    *ngIf="sidenav.mode === 'over'"
-    (click)="sidenav.toggle()"
-  >
-    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-  </button>
-  <app-navbar></app-navbar>
-</mat-toolbar>
+<!-- cette navigation est temporairement ici en attendant que Thomas ajuste son formulaire de connexion -->
+<!-- car quand je clique sur connexion, je reçoit une alerte -->
+<!--  cela me permet en attendant d'avoir un accès à ma partie du travail et à apporter les ajustements -->
+<!-- <app-navigation></app-navigation> -->
 
-<!-- Ce code est responsable du contenu du site-tout le contenu des pages principales et secondaires se trouve dedans -->
-<mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav">
-    <app-sidebar></app-sidebar>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+
+<!--  Ceci est la page d'accueil  -->
+<app-accueil></app-accueil>

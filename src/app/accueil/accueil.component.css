@@ -1,4 +1,7 @@
-@charset "UTF-8";
+.bg-acceuil {
+  background-image: url("../../assets/img/e-stage-accueil.jpg");
+}
+
 /* Thomas : Il semble que le SASS natif empiète sur Bootstrap , pour cette raison tous les composants entreprise et acceuil utilise cette version.  */
 /* Style global du projet */
 /*** Déclaration des variables de couleurs ***/

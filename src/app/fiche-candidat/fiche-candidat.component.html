@@ -2,6 +2,8 @@
 <!--Programmée par Rachida Zaoug -->
 <!-- Date de dernière modification: 2022-03-28 -->
 
+<app-navigation></app-navigation>
+
 <h2>Fiche complète du candidat</h2>
 
 
@@ -26,7 +28,9 @@
 
           <div class="entete">
           <b>Candidat</b>
+          <br>
           <label><h3>{{candidat.name}}</h3></label>
+          <br>
           <label class="jobTitle">{{candidat.jobTitle}}</label>
           </div>
           <br>
@@ -42,37 +46,37 @@
 
 
               <div class="info">
-              <b>Adresse: </b>
+              <b>Adresse: </b></div>
               <label><p>{{candidat.address}}</p></label>
-              </div>
+              
             
               <div class="info">
-              <b>Ville: </b>
+              <b>Ville: </b></div>
               <label><p>{{candidat.city}}</p></label>
-              </div>
+              
 
               <div class="info">
-              <b>Province: </b>
+              <b>Province: </b></div>
               <label><p>{{candidat.province}}</p></label>
-              </div>
+              
 
 
               <div class="info">
-              <b>Code postal </b>
+              <b>Code postal </b></div>
               <label><p>{{candidat.postalCode}}</p></label>
-              </div>
+              
 
               <div class="containerCordonnees">
               <div class="info">
-              <b>Téléphone: </b>
+              <b>Téléphone: </b></div>
               <label><p>{{candidat.phone}}</p></label>
-              </div>
+              
 
 
               <div class="info">
-              <b>Email: </b>
+              <b>Email: </b></div>
               <label><p>{{candidat.email}}</p></label>
-            </div>
+            
             </div>
           </div>
       </form>

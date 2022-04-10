@@ -50,13 +50,19 @@ p {
 }
 
 /* You can add global styles to this file, and also import other style files */
-.grandeur-admin-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+mat-sidenav {
+  width: 200px;
+  background: #fff;
+  color: #000000;
 }
 
-.marge-admin-name {
-  margin-bottom: -0.1em;
+mat-toolbar {
+  background-color: #fff;
 }
-/*# sourceMappingURL=identification.component.css.map */
+
+.content {
+  margin: 16px;
+  margin-left: 32px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=navigation.component.css.map */

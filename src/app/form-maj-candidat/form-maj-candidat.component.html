@@ -2,15 +2,19 @@
 <!--Programmée par Rachida Zaoug -->
 <!-- Date de dernière modification: 2022-03-28 -->
 
+<app-navigation></app-navigation>
+
 <h2>Formulaire de mise à jour du candidat</h2>
 
 <div>
-  <button type="submit" id="btn__boutonMaj" style="float: right; "><mat-icon>save</mat-icon>Mettre à jour</button>
-  <button (click)=" listesCandidat()" id="btn__boutonAnnuler" style="float: right; "><mat-icon>cancel</mat-icon>annuler</button><br>
 
 </div>
 
 <form (ngSubmit)="onSubmit()"> 
+
+  <button type="submit" id="btn__boutonMaj" style="float: right; "><mat-icon>save</mat-icon>Mettre à jour</button>
+  <button (click)=" listesCandidat()" id="btn__boutonAnnuler" style="float: right; "><mat-icon>cancel</mat-icon>annuler</button><br>
+
 
           <div class="entete">
 
@@ -32,17 +36,13 @@
           <br>
 
 
-
-
-     
           <label for="description"><h4>Présentation</h4></label>
           <textarea type="text" rows="10" cols="60" class="form-control" id="description"  required [(ngModel)]="candidat.description" name="description"></textarea>
           
 
           <br>
-      
-
           <br>
+          
           <label for="address"><h4>Adresse: </h4></label>
           <input type="text" class="form-control" id="address"  required [(ngModel)]="candidat.address" name="address">
         

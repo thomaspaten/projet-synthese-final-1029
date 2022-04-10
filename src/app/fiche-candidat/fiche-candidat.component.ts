@@ -5,7 +5,6 @@ import { Candidat } from '../candidat';
 import { CandidatService } from '../candidat.service';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
-// Test Modal
 
 
 
@@ -24,7 +23,7 @@ export class FicheCandidatComponent implements OnInit {
 
   constructor(private candidatService: CandidatService, private route: ActivatedRoute, private router: Router, public dialog: MatDialog) {}
 
-  // test modal 1
+  // test modal 1 pour le delete
       openConfirmationDialog(){
         this.dialogRef = this.dialog.open(ConfirmationDialogComponent, {
           disableClose: false
@@ -41,7 +40,7 @@ export class FicheCandidatComponent implements OnInit {
         });
       }
 
-      // test modal2
+      // test modal2 pour le delete
        
       openDialog(){
         
