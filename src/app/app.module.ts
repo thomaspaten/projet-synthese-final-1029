@@ -53,6 +53,7 @@ import { ListeDesCandidatsComponent } from './liste-des-candidats/liste-des-cand
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { EntreprisesDetailsComponent } from './entreprises-details/entreprises-details.component';
 import { IdentificationComponent } from './identification/identification.component';
+import { NavigationComponent } from './navigation/navigation.component'
 
 // Services
 
@@ -91,7 +92,8 @@ import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/co
     EntreprisesComponent,
     EntreprisesDetailsComponent,
     IdentificationComponent,
-    AjoutEntrepriseComponent
+    AjoutEntrepriseComponent,
+    NavigationComponent
   ],
   imports: [
     MatDialogModule,
