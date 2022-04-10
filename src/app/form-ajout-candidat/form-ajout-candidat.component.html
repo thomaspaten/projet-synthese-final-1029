@@ -2,7 +2,7 @@
 <!--Programmée par Rachida Zaoug -->
 <!-- Date de dernière modification: 2022-03-28 -->
 
-<app-navigation></app-navigation>
+<!-- <app-navigation></app-navigation> -->
 
 
 <h2>Ajouter un candidat</h2>
@@ -38,13 +38,14 @@
 
 
     <div class="container-fluid">
-        <label id="name" for="name"><h2>Courte présentation</h2></label>
+        <div><label id="name" for="name"><h2>Courte présentation</h2></label></div>
         <mat-form-field appearance="fill" class="half-width">
         <textarea class="presentation" matInput name="description" [(ngModel)]="candidat.description" name="description" #description="ngModel" matInput required cols="20px" rows="10px"></textarea>
         <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('required')">La description est obligatoire.</mat-error>
         <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
         <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
     </mat-form-field>
+    
     
 
 

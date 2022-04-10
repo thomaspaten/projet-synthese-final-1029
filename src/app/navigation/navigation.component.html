@@ -14,9 +14,11 @@
             <mat-icon *ngIf="sidenav.opened">
                 close
             </mat-icon>
-        </button>
-        <app-navbar></app-navbar>
+            </button>
 
+        <app-navbar></app-navbar>
+            <!-- ceci est le  nom et prenom de la personne connectée -->
+        <div class="identification"><app-identification></app-identification></div>
 
     </mat-toolbar>
 
@@ -27,6 +29,7 @@
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content">
+          
                 <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>
