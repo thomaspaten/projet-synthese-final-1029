@@ -1,18 +1,17 @@
-<div class="container-fluid c-gris-pale  " >
 <div class="container ">
   <div class="row py-5 ">
     <div class="col-12"><h1>Entreprise</h1></div>
   </div>
   <div class="row pb-3">
     <div class="col-12">
-      <button type="button" class="btn btn-primary">Ajouter une entreprise</button>
+      <button type="button" class="btn bg-c-bleu mb-4">Ajouter une entreprise</button>
     </div>
   </div>
 <div class="row">
   </div>
   <div  class="row">
     <div *ngFor="let entreprise of entreprises" class="col-sm-6">
-    <div (click)="(obtenirEntreprise(entreprise._id))" class="card mb-3 p-5">
+    <div (click)="(obtenirEntreprise(entreprise._id))" class="card mb-3 p-5 border-0">
       <div class="row g-0">
         <div class="col-12 col-md-4 m-3 m-md-0  d-flex align-items-center align-items-center ps-lg-5">
           <img class="" src="../../assets/img/entreprises.png" class="img-fluid rounded-start" alt="...">
@@ -32,7 +31,6 @@
         </div>
       </div>
     </div>
-</div>
 </div>
 
 
