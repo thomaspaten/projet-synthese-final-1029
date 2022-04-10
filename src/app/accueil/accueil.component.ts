@@ -20,8 +20,6 @@ this.identificationService.ajoutNomEtPrenom(nomEtPrenom)
   };
   getValue(val:string){
     this.nomEtPrenom = val;
-    console.warn(val)
-
   }
 
   constructor(

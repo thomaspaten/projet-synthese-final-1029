@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
 import { EntreprisesService } from '../entreprises.service';
+import { Entreprise } from '../entreprise';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-entreprises-details',
@@ -8,14 +9,17 @@ import { EntreprisesService } from '../entreprises.service';
   styleUrls: ['./entreprises-details.component.sass']
 })
 export class EntreprisesDetailsComponent implements OnInit {
+  entreprise!: Entreprise;
+  _id!: number;
 
-// https://www.angularjswiki.com/angular/get-query-parameters-in-angular/
-// Prendre query param pas query param map .
-  constructor(private activatedRoute: ActivatedRoute, private EntreprisesService: EntreprisesService, private RouterModule: RouterModule) {
+  constructor(private activatedRoute: ActivatedRoute, private EntreprisesService: EntreprisesService, private Router: Router, private route: ActivatedRoute) {
 
    }
-
   ngOnInit(): void {
+    this._id = this.route.snapshot.params['_id'];
+    this.EntreprisesService.ObtenirEntreprise(this._id).subscribe(data => {
+      console.log(data)
+      this.entreprise = data;
+      }, error => console.log(error));
   }
-
 }
