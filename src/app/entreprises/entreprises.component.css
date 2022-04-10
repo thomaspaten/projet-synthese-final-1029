@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Thomas : Il semble que le SASS natif empiète sur Bootstrap , pour cette raison tous les composants entreprise et acceuil utilise cette version.  */
 /* Style global du projet */
 /*** Déclaration des variables de couleurs ***/
 /* Couleurs des icônes d'action */
@@ -56,5 +57,9 @@ p {
 
 .small-text-c-med-gris {
   color: #707070;
+}
+
+.c-bleu {
+  color: #86A9E6;
 }
 /*# sourceMappingURL=entreprises.component.css.map */
