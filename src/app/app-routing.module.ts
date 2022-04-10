@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AjoutOffreStageComponent } from './ajout-offre-stage/ajout-offre-stage.component';
-import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
 import { MajOffreStageComponent } from './maj-offre-stage/maj-offre-stage.component';
 import { OffreDetailComponent } from './offre-detail/offre-detail.component';
-
+import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
 import { AjoutDemandeStageComponent } from './ajout-demande-stage/ajout-demande-stage.component';
 import { ModifDemandeStageComponent } from './modif-demande-stage/modif-demande-stage.component';
 import { VoirDemandeStageComponent } from './voir-demande-stage/voir-demande-stage.component';
