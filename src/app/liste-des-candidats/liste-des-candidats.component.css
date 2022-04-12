@@ -79,11 +79,11 @@ mat-card-content {
 }
 
 button {
-  margin-top: 10%;
+  margin: 5rem;
 }
 
-mat-card {
-  margin: 5px;
+.liste-card {
+  margin-bottom: 5px;
 }
 
 .btn__button4 {

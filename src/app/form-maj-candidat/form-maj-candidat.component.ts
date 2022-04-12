@@ -21,7 +21,7 @@ export class FormMajCandidatComponent implements OnInit {
 
   ngOnInit() {
     this.candidat = new Candidat();
-    this._id = this.route.snapshot.params['id'];
+    this._id = this.route.snapshot.params['_id'];
     this.candidatService.getCandidat(this._id).subscribe(data => {
       this.candidat = data;
       console.log(data);
