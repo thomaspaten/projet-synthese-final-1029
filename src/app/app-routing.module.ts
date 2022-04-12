@@ -17,6 +17,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { EntreprisesDetailsComponent } from './entreprises-details/entreprises-details.component';
 import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.component';
+import { MajEntrepriseComponent } from './maj-entreprise/maj-entreprise.component';
 
 const routes: Routes = [
   { path: 'ajoutDemande', component: AjoutDemandeStageComponent},
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path: 'offres', component: ListeOffresStagesComponent },
   { path: 'offre/:_id', component: OffreDetailComponent},
   { path: 'maj-offre/:_id', component: MajOffreStageComponent},
-  { path: 'ajout-offre', component: AjoutOffreStageComponent}
+  { path: 'ajout-offre', component: AjoutOffreStageComponent},
+  { path: 'maj-entreprise', component: MajEntrepriseComponent}
 ]
 
   //  verifier la 1er page de Dernières demandes de stage- qui correspond à la page du tableau bord

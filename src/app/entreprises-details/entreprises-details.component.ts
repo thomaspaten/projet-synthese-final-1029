@@ -27,6 +27,9 @@ export class EntreprisesDetailsComponent implements OnInit {
   redirigerVersEntreprise(){
     this.Router.navigateByUrl('entreprises');
   }
+  redirigerVersMajEntreprise(){
+    this.Router.navigateByUrl('maj-entreprise');
+  }
 
   supprimerEntreprise(_id:any) {
     let confirmationSuppression = confirm("Êtes-vous certain de vouloir supprimer cette entreprise ?");
