@@ -22,4 +22,22 @@ export class EntreprisesDetailsComponent implements OnInit {
       this.entreprise = data;
       }, error => console.log(error));
   }
+
+
+  redirigerVersEntreprise(){
+    this.Router.navigateByUrl('entreprises');
+  }
+
+  supprimerEntreprise(_id:any) {
+    let confirmationSuppression = confirm("Êtes-vous certain de vouloir supprimer cette entreprise ?");
+    if (confirmationSuppression) {
+    this.EntreprisesService.supprimerEntreprise(_id).subscribe(donnee => { console.log(donnee); this.ngOnInit();
+    // Redirige vers la page entreprise lorsqu'une suppression est exécuté pour ne pas afficher inutilement un formulaire vide.
+    this.redirigerVersEntreprise()
+    },
+    error => alert(error));
+    }
+
+  }
+
 }
