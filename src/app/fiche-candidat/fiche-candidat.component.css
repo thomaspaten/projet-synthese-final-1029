@@ -54,6 +54,11 @@ form {
   margin-left: 5rem;
 }
 
+button {
+  margin: 5px;
+  padding: 5%;
+}
+
 .entete {
   border: none;
   border-left: 0.50rem solid;

@@ -23,38 +23,22 @@ export class FicheCandidatComponent implements OnInit {
 
   constructor(private candidatService: CandidatService, private route: ActivatedRoute, private router: Router, public dialog: MatDialog) {}
 
-  // test modal 1 pour le delete
-      openConfirmationDialog(){
-        this.dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-          disableClose: false
-        });
-
-        this.dialogRef.componentInstance.confirmMessage = 'Êtes vous sûr de vouloir supprimer?'
-        this.dialogRef.afterClosed().subscribe(result => {
-          if(result === 'yes') {
-              
-          this.deleteCandidat
-            
-          }
-              this.dialogRef = undefined;
-        });
-      }
-
-      // test modal2 pour le delete
+  
+      // test modal pour le delete non fonctionnel/j'ai fait activer une alerte avec le delete qui est fonctionnel plus bas
        
-      openDialog(){
+      // openDialog(){
         
-        const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-          width: '250px',
-        });
+      //   const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      //     width: '250px',
+      //   });
 
-          dialogRef.afterClosed().subscribe(result => {
-            if(result.event == 'Delete'){
-              this.deleteCandidat(result._id);
-            }
-          })
+      //     dialogRef.afterClosed().subscribe(result => {
+      //       if(result.event == 'Delete'){
+      //         this.deleteCandidat(result._id);
+      //       }
+      //     })
 
-      }
+      // }
 
 
   ngOnInit() {
@@ -71,7 +55,6 @@ export class FicheCandidatComponent implements OnInit {
       }, error => console.log(error));
   }
 
-  // Ceci est une fonction pour la mise a jour en attendant que l'api fonctionne pour faire le teste et verifier laquelle des deux fonctions retourne le bon objet
   // Ceci est une fonction qui permet la mise à jour de la fiche du candidat
 
   editCandidat(_id: number) {

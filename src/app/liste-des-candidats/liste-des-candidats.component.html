@@ -6,14 +6,14 @@
 
 
 <h2>Candidats</h2>
-<button mat-raised-button class="btn__button4" style="float: left; " (click)="addCandidat()"> + Ajouter un candidat</button>
-<br>
-<br>
-<br>
 
-    <ng-container *ngFor="let candidat of candidats">
+<div><button mat-raised-button class="btn__button4" (click)="addCandidat()"> + Ajouter un candidat</button></div>
 
+
+    <ng-container class="container-fluid" *ngFor="let candidat of candidats">
+     
   <mat-card class="liste-card" (click)="candidatDetails(candidat._id)">
+
     <mat-card-title>
       <mat-icon>person</mat-icon>
     </mat-card-title>

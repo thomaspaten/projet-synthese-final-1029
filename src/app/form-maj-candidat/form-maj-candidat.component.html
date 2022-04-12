@@ -2,76 +2,65 @@
 <!--Programmée par Rachida Zaoug -->
 <!-- Date de dernière modification: 2022-03-28 -->
 
-<app-navigation></app-navigation>
 
 <h2>Formulaire de mise à jour du candidat</h2>
 
 <div>
-
+  <button type="submit" id="btn__boutonMaj" style="float: right; "><mat-icon>save</mat-icon>Mettre à jour</button>
+  <button (click)=" listesCandidat()" id="btn__boutonAnnuler" style="float: right; "><mat-icon>cancel</mat-icon>annuler</button><br>
 </div>
 
 <form (ngSubmit)="onSubmit()"> 
 
-  <button type="submit" id="btn__boutonMaj" style="float: right; "><mat-icon>save</mat-icon>Mettre à jour</button>
-  <button (click)=" listesCandidat()" id="btn__boutonAnnuler" style="float: right; "><mat-icon>cancel</mat-icon>annuler</button><br>
-
 
           <div class="entete">
 
-          <h5>Candidat</h5>
-          <label for="name"></label>
-          <input type="text" class="form-control" id="name"  required [(ngModel)]="candidat.name" size='25' name="name">
-            
-          <br>
-          <br>
-          <label for="jobtitle"></label>
-          <input type="text" class="form-control" id="jobtitle"  required [(ngModel)]="candidat.jobTitle" size='50' name="jobtitle">
-        </div>
+          <b>Candidat</b>
+          
+          <div><input type="text" id="name"  required [(ngModel)]="candidat.name" name="name"></div>
+          
+          <div><input type="text" id="jobtitle"  required [(ngModel)]="candidat.jobTitle" name="jobtitle"></div>
+          </div>
 
-          
-          
-          
-          
-          <br>
-          <br>
-
-
-          <label for="description"><h4>Présentation</h4></label>
+          <div class="container-fluid">
+          <label for="description"><h4> Courte présentation</h4></label>
           <textarea type="text" rows="10" cols="60" class="form-control" id="description"  required [(ngModel)]="candidat.description" name="description"></textarea>
         
 
-          <br>
-          <br>
+         
           
-          <label for="address"><h4>Adresse: </h4></label>
+          <label for="address"><b>Adresse: </b></label>
           <input type="text" class="form-control" id="address"  required [(ngModel)]="candidat.address" name="address">
         
 
-          <br>
-          <label for="city"><h4>Ville: </h4></label>
+          
+          <label for="city"><b>Ville: </b></label>
           <input type="text" class="form-control" id="city"  required [(ngModel)]="candidat.city" name="city" >
        
 
-          <br>
+          <label for="province"><b>Province: </b></label>
+          <input type="text" class="form-control" id="province"  required [(ngModel)]="candidat.province" name="province" >
+       
          
-          <label for="postalCode"><h4>Code postal </h4></label>
+          <label for="postalCode"><b>Code postal </b></label>
           <input type="text" class="form-control" id="postalCode"  required [(ngModel)]="candidat.postalCode" name="postalCode">
          
         
-          <br>
-          <label for="phone"><h4>Téléphone: </h4></label>
+          <div class="containerCordonnees">
+          <label for="phone"><b>Téléphone: </b></label>
           <input type="text" class="form-control" id="phone"  required [(ngModel)]="candidat.phone" name="phone">
         
-          <br>
-          <label for="email"><h4>Email: </h4></label>
+        
+          <label for="email"><b>Email: </b></label>
           <input type="text" class="form-control" id="email"  required [(ngModel)]="candidat.email" name="email">
-
-          <br>
-            <button type="submit" id="btn__boutonMaj" style="float: right; "><mat-icon>save</mat-icon>Mettre à jour</button>
-            <button (click)=" listesCandidat()" id="btn__boutonAnnuler" style="float: right; "><mat-icon>cancel</mat-icon>annuler</button><br>
+          </div>
+        </div>
           
     
       </form>
 
-      <br>
+      <div>
+        <button type="submit" id="btn__boutonMaj" style="float: right; "><mat-icon>save</mat-icon>Mettre à jour</button>
+        <button (click)=" listesCandidat()" id="btn__boutonAnnuler" style="float: right; "><mat-icon>cancel</mat-icon>annuler</button><br>
+      </div> 
       <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button><br>

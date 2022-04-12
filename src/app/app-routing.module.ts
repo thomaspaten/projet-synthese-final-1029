@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'tableDemande', component: TableDemandeStageComponent},
   { path: 'candidats', component: ListeDesCandidatsComponent },
   { path: 'candidat/:_id', component: FicheCandidatComponent  },
-  { path: 'update/:id', component: FormMajCandidatComponent },
+  { path: 'update/:_id', component: FormMajCandidatComponent },
   { path: 'ajouter-un-candidat', component: FormAjoutCandidatComponent },
   { path: 'candidats', component: ListeDesCandidatsComponent },
   { path: '', component: AccueilComponent },
@@ -40,8 +40,8 @@ const routes: Routes = [
   { path: 'ajout-offre', component: AjoutOffreStageComponent}
 ]
 
-    // ici il va falloir ajouter les routes du sidebar pour que chacuns des boutons renvoient à la bonne page
-    // va falloir aussi rajouter les bonnes références dans la page sidebar.componant.html
+  //  verifier la 1er page de Dernières demandes de stage- qui correspond à la page du tableau bord
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

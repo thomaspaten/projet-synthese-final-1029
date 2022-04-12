@@ -2,23 +2,20 @@
 <!--Programmée par Rachida Zaoug -->
 <!-- Date de dernière modification: 2022-03-28 -->
 
-<app-navigation></app-navigation>
 
-<h2>Fiche complète du candidat</h2>
+<!-- <h2>Fiche complète du candidat</h2> -->
+
 
 
 <button mat-raised-button class="btn btn-info" style="float: right; "  (click)="editCandidat(candidat._id)"><mat-icon>update</mat-icon></button>
 <button mat-raised-button class="btn btn-info" style="float: right; "  (click)="deleteCandidat(candidat._id)"><mat-icon>delete</mat-icon></button>
+<button mat-raised-button class="btn btn-info" style="float: right; "  (click)=" listesCandidat()"><mat-icon>cancel</mat-icon></button>
+
+
+
 
 <!-- action modal non fonctionnelle/en attente de test-->
-
-<!-- <button mat-raised-button class="btn btn-info" (click)="openConfirmationDialog()"><b>Delete me</b></button> -->
-<!-- test modal 2 -->
 <!-- <button mat-raised-button class="btn btn-info" (click)="openDialog()"><b>Delete moi</b></button> -->
-
-
-
-
 
 <br>
 <br>
@@ -82,7 +79,7 @@
       </form>
 
       <br>
-        <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button><br>
+        <button (click)=" listesCandidat()" class="btn btn-primary">Revenir à la liste des candidats</button>
 
 
     
