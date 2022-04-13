@@ -34,6 +34,7 @@ export class FormAjoutCandidatComponent implements OnInit {
     this.candidat = new Candidat();
     }
 
+    
     save() {
       this.candidatService.addCandidat(this.candidat)
         .subscribe(data => console.log(data), error => console.log(error));

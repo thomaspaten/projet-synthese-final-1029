@@ -1,4 +1,5 @@
-// Creer par Rachida Zaoug
+// Programmée par Rachida Zaoug 
+// Date de dernière modification: 2022-04-12 
 // Ceci est la class propre aux candidats.
 
 export class Candidat {

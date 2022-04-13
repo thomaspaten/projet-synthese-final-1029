@@ -51,6 +51,10 @@ p {
   }
 }
 
+body {
+  color: #707070;
+}
+
 .liste-card {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -76,6 +80,7 @@ mat-card-content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Open Sans";
 }
 
 button {

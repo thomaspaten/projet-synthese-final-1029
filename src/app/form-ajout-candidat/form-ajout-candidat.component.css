@@ -50,6 +50,10 @@ p {
   }
 }
 
+body {
+  color: #707070;
+}
+
 form {
   min-width: 150px;
   margin-left: 60px;
@@ -87,10 +91,12 @@ mat-form {
 
 p {
   color: #000000;
+  font-family: "Open Sans";
 }
 
 h5, h2 {
   color: #86A9E6;
+  font-family: "Open Sans";
 }
 
 button {

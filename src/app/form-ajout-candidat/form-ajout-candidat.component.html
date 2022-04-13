@@ -1,6 +1,6 @@
 <!-- <p>form-ajout-candidat works!</p> -->
 <!--Programmée par Rachida Zaoug -->
-<!-- Date de dernière modification: 2022-03-28 -->
+<!-- Date de dernière modification: 2022-04-12 -->
 
 <!-- <app-navigation></app-navigation> -->
 
@@ -38,6 +38,7 @@
 
 
     <div class="container-fluid">
+        
         <div><label id="name" for="name"><h2>Courte présentation</h2></label></div>
         <mat-form-field appearance="fill" class="half-width">
         <textarea class="presentation" matInput name="description" [(ngModel)]="candidat.description" name="description" #description="ngModel" matInput required cols="20px" rows="10px"></textarea>
@@ -45,7 +46,7 @@
         <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
         <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
     </mat-form-field>
-    
+        
     
 
 
@@ -117,7 +118,7 @@
 
 
 
-
+    <!-- Ce bouton permet de revenir à la liste générale de candidat -->
 
     <button (click)=" listesCandidat()" id="btn__boutonCancelCandidat" style="float: left; ">Revenir à la liste des candidats</button><br>
 

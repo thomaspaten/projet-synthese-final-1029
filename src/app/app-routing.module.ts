@@ -17,9 +17,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { EntreprisesComponent } from './entreprises/entreprises.component';
 import { EntreprisesDetailsComponent } from './entreprises-details/entreprises-details.component';
 import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LayoutComponent } from './layout/layout.component';
 import { MajEntrepriseComponent } from './maj-entreprise/maj-entreprise.component';
 
-const routes: Routes = [
+const childrenRoutes: Routes = [
   { path: 'ajoutDemande', component: AjoutDemandeStageComponent},
   { path: 'voirDemande/:_id', component: VoirDemandeStageComponent},
   { path: 'modifDemande/:_id', component: ModifDemandeStageComponent},
@@ -29,20 +31,32 @@ const routes: Routes = [
   { path: 'update/:_id', component: FormMajCandidatComponent },
   { path: 'ajouter-un-candidat', component: FormAjoutCandidatComponent },
   { path: 'candidats', component: ListeDesCandidatsComponent },
-  { path: '', component: AccueilComponent },
-  { path: 'accueil', component: AccueilComponent },
   { path: 'entreprises', component: EntreprisesComponent },
   { path: 'entreprises-details/:_id', component: EntreprisesDetailsComponent },
   { path: 'form-ajout-candidat', component: FormAjoutCandidatComponent },
-  {path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
+  { path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
   { path: 'offres', component: ListeOffresStagesComponent },
   { path: 'offre/:_id', component: OffreDetailComponent},
   { path: 'maj-offre/:_id', component: MajOffreStageComponent},
   { path: 'ajout-offre', component: AjoutOffreStageComponent},
-  { path: 'maj-entreprise', component: MajEntrepriseComponent}
-]
 
-  //  verifier la 1er page de Dernières demandes de stage- qui correspond à la page du tableau bord
+  
+];
+
+const routes: Routes = [
+
+  // ceci correspond à la page de connexion qui inclu toutes les pages enfants
+
+  { path: '', component: LayoutComponent, children: childrenRoutes },
+
+  // Celle-ci est notre page d'accueil- je l'ai représenté par le nom: login
+  // Lorsque vous allez lancer l'application vous devez ajouter /login à la barre d'url pour voir apparaître la 1er page de connexion.
+  { path: 'login', component: AccueilComponent },
+
+
+
+];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
