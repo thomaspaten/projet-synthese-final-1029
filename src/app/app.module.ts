@@ -64,6 +64,7 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
 import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
 import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/confirm-dialog-offrestage.component';
 import { LayoutComponent } from './layout/layout.component';
+import { MajEntrepriseComponent } from './maj-entreprise/maj-entreprise.component';
 
 // const appRoute: Routes = [
 //   {path: 'liste', component: ListeOffresStagesComponent},
@@ -95,7 +96,8 @@ import { LayoutComponent } from './layout/layout.component';
     IdentificationComponent,
     AjoutEntrepriseComponent,
     NavigationComponent,
-    LayoutComponent
+    LayoutComponent,
+    MajEntrepriseComponent
   ],
   imports: [
     MatDialogModule,

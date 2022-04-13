@@ -29,4 +29,8 @@ export class EntreprisesService {
   AjoutEntreprise(Entreprise: String) : Observable<Entreprise> {
     return this.http.post<Entreprise>(this.URL, Entreprise, httpOptions);
   }
+
+  public supprimerEntreprise(_id: number): Observable<any> {
+    return this.http.delete(`${this.URL}/${_id}`, { responseType: 'text' });
+  }
 }
