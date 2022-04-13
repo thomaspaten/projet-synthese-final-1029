@@ -63,6 +63,7 @@ import { EntreprisesService } from './entreprises.service';
 import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.component';
 import { ListeOffresStagesComponent } from './liste-offres-stages/liste-offres-stages.component';
 import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/confirm-dialog-offrestage.component';
+import { LayoutComponent } from './layout/layout.component';
 
 // const appRoute: Routes = [
 //   {path: 'liste', component: ListeOffresStagesComponent},
@@ -93,7 +94,8 @@ import { ConfirmDialogOffrestageComponent } from './confirm-dialog-offrestage/co
     EntreprisesDetailsComponent,
     IdentificationComponent,
     AjoutEntrepriseComponent,
-    NavigationComponent
+    NavigationComponent,
+    LayoutComponent
   ],
   imports: [
     MatDialogModule,

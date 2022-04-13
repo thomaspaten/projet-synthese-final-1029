@@ -29,6 +29,7 @@ export class FormMajCandidatComponent implements OnInit {
       error => console.log(error));
     }
 
+      // permet le update du candidat
 
     editCandidat() {
       this.candidatService.updateCandidat(this._id, this.candidat).

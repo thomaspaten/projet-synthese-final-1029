@@ -1,10 +1,11 @@
 <!-- <p>navigation works!</p> -->
 
 <!--Programmée par Rachida Zaoug -->
-<!-- Date de dernière modification: 2022-03-28 -->
+<!-- Date de dernière modification: 2022-04-12 -->
 
 
     <!-- Ce code est responsable de l'apparition su menu humburger lorsque l'écran est réduite -->
+
     <mat-toolbar>
 
         <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
@@ -29,7 +30,6 @@
         </mat-sidenav>
         <mat-sidenav-content>
             <div class="content">
-
                 <router-outlet></router-outlet>
             </div>
         </mat-sidenav-content>

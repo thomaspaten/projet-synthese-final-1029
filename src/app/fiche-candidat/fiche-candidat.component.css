@@ -50,8 +50,8 @@ p {
   }
 }
 
-form {
-  margin-left: 5rem;
+body {
+  color: #707070;
 }
 
 button {
@@ -71,24 +71,27 @@ button {
 }
 
 label, p, h2, b, h4, h5, h3 {
+  font-family: "Open Sans";
   border: none;
   margin-left: 10px;
 }
 
 h2, h4 {
   color: #86A9E6;
+  font-family: "Open Sans";
 }
 
 .jobTitle {
-  background-color: white;
+  background-color: #fff;
 }
 
 .container-fluid {
-  background-color: white;
+  background-color: #fff;
 }
 
 p {
   font-size: 10px;
+  font-family: "Open Sans";
 }
 
 .containerCordonnees {
