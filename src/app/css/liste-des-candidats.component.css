@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*J'ai utilisé le flexbox pour aligner les elements de ma carte */
 /* Style global du projet */
 /** Importation de Bootstrap **/
 @import url(/Volumes/DonnéePerso/Github/projet-synthese-final-1029/node_modules/bootstrap/dist/css/bootstrap.css);
@@ -48,4 +49,41 @@ p {
   p {
     font: 400 16px/20px "Open Sans";
   }
+}
+
+.liste-card {
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+mat-card-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+mat-card-content {
+  display: inline-flex;
+  justify-content: center;
+}
+
+button {
+  margin: 5rem;
+}
+
+.liste-card {
+  margin-bottom: 5px;
+}
+
+.btn__button4 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #07A04A;
+  color: #07A04A;
+}
+
+.btn__button4:hover {
+  cursor: pointer;
+  filter: brightness(85%);
 }

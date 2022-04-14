@@ -13,8 +13,10 @@
                 <h3>{{titre}}</h3>
             </div>
         </div>
-    </div>        
+    </div>
+    <!-- Début du formulaire-->        
     <form class="pt-5" #demandeAjoutForm="ngForm">
+        <!-- Bouton d'action du haut du formulaire -->
         <div class="pr-5 float-right">
             <button type="reset" class="btn btn-secondary mr-3" (click)="goBack()">Annuler</button>
             <button type="submit" class="btn btn-primary"><mat-icon class="mr-1" (click)="onSave(demandeAjoutForm)">save</mat-icon> Sauvegarder </button>
@@ -61,7 +63,9 @@
                     <label for="secteurActivite">Secteur d'activité</label><br>
                     <select name="secteurActivite" id="secteurActivite" required>
                         <option selected>Veuillez effectuer un choix</option>
-                        <option>HTML/CSS</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
                     </select>
                 </div>
                 <div class="col-12 col-sm-6 form-group">
@@ -76,7 +80,9 @@
                     <label for="region">Region</label><br>
                     <select name="region" id="region" required>
                         <option selected>Veuillez effectuer un choix</option>
-                        <option>HTML/CSS</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
                     </select>
                 </div>
             </div>
@@ -102,7 +108,9 @@
                     <label for="typeStage">Type de stage</label><br>
                     <select name="typeStage" id="typeStage" required>
                         <option selected>Veuillez effectuer un choix</option>
-                        <option>HTML/CSS</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
                     </select>                            
                 </div>
                 <div class="col-12 col-sm-6 form-group">
@@ -118,6 +126,7 @@
                     <select name="langage" id="langage" required>
                         <option selected>Veuillez effectuer un choix</option>
                         <option>25 heures</option>
+                        <option>35 heures</option>
                     </select>                            
                 </div>
                 <div class="col-12 col-sm-6 form-group">

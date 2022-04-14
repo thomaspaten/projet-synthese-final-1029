@@ -49,3 +49,52 @@ p {
     font: 400 16px/20px "Open Sans";
   }
 }
+
+form {
+  margin-left: 5rem;
+}
+
+button {
+  margin: 5px;
+  padding: 5%;
+}
+
+.entete {
+  border: none;
+  border-left: 0.50rem solid;
+  border-color: #86A9E6;
+}
+
+.info {
+  border: none;
+  border-left: 0.50rem solid;
+}
+
+label, p, h2, b, h4, h5, h3 {
+  border: none;
+  margin-left: 10px;
+}
+
+h2, h4 {
+  color: #86A9E6;
+}
+
+.jobTitle {
+  background-color: white;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+p {
+  font-size: 10px;
+}
+
+.containerCordonnees {
+  position: absolute;
+  right: 20px;
+  width: 40%;
+  top: 400px;
+  float: right;
+}

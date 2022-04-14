@@ -49,3 +49,75 @@ p {
     font: 400 16px/20px "Open Sans";
   }
 }
+
+form {
+  min-width: 150px;
+  margin-left: 60px;
+}
+
+.container {
+  display: grid;
+}
+
+.container-fluid {
+  background-color: #fff;
+}
+
+label {
+  margin-right: 2%;
+}
+
+mat-form {
+  display: inline-flex;
+}
+
+.half-width {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.half-widthInfo {
+  width: 50%;
+  margin-right: 5px;
+  border-left: solid;
+}
+
+p {
+  color: #000000;
+}
+
+h5, h2 {
+  color: #86A9E6;
+}
+
+button {
+  margin-bottom: 5%;
+}
+
+.container-coordonnees {
+  position: absolute;
+  right: 20px;
+  width: 40%;
+  top: 610px;
+  float: right;
+}
+
+#btn__boutonAjoutCandidat {
+  color: #fff;
+  background-color: #7F2987;
+}
+
+#btn__boutonCancelCandidat {
+  color: #5E5E5E;
+  background-color: #CBCBCB;
+}
+
+#btn__boutonAjoutCandidat:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+#btn__boutonCancelCandidat:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
