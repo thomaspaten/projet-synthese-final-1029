@@ -50,18 +50,66 @@ p {
   }
 }
 
-.red-med-title {
-  color: #089DA4;
+ul {
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 50px;
+  list-style-type: none;
+  width: 85%;
 }
 
-.checkbox {
-  margin: 0 12px;
+li {
+  font-size: 60%;
 }
 
-.checkbox-section {
-  margin: 12px 0;
+#btn__button1 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #F26689;
+  color: #F26689;
 }
 
-.align-droit {
-  float: right;
+#btn__button2 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #F89747;
+  color: #F89747;
+}
+
+#btn__button3 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #86A9E6;
+  color: #86A9E6;
+}
+
+#btn__button4 {
+  border-style: solid;
+  background: transparent;
+  border-radius: 5px;
+  border-color: #7F2987;
+  color: #7F2987;
+}
+
+#btn__button1:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+#btn__button2:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+#btn__button3:hover {
+  cursor: pointer;
+  filter: brightness(85%);
+}
+
+#btn__button4:hover {
+  cursor: pointer;
+  filter: brightness(85%);
 }

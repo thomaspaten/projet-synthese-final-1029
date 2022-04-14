@@ -11,7 +11,8 @@
             </div>
         </div>
     </div>
-    <div class="pr-5 float-right">
+    <!-- Bouton d'action -->
+    <div class="pr-5 align-droit">
         <button class="btn btn__check"><mat-icon (click)="goBack()">check</mat-icon></button>
         <button class="btn btn__edit"><mat-icon routerLink="/modifDemande/{{demande._id}}">edit</mat-icon> </button>
         <button class="btn btn__supp"><mat-icon (click)="suppDemande(demande)">cancel</mat-icon></button>
@@ -113,6 +114,7 @@
             </div>
         </div>
     </div>
+    <!-- Bouton d'action du CV -->
     <div class="container pt-3 pb-5">
         <div class="row">                
             <div class="col-12 form-group">                    

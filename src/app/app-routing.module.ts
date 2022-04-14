@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'entreprises', component: EntreprisesComponent },
   { path: 'entreprises-details/:_id', component: EntreprisesDetailsComponent },
   { path: 'form-ajout-candidat', component: FormAjoutCandidatComponent },
-  {path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
+  { path: 'ajout-entreprise', component: AjoutEntrepriseComponent},
   { path: 'offres', component: ListeOffresStagesComponent },
   { path: 'offre/:_id', component: OffreDetailComponent},
   { path: 'maj-offre/:_id', component: MajOffreStageComponent},

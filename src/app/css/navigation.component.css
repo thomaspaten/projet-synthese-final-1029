@@ -49,3 +49,23 @@ p {
     font: 400 16px/20px "Open Sans";
   }
 }
+
+mat-sidenav {
+  width: 200px;
+  background: #fff;
+  color: #000000;
+}
+
+.identification {
+  margin-left: 20%;
+}
+
+mat-toolbar {
+  background-color: #fff;
+}
+
+.content {
+  margin: 16px;
+  margin-left: 32px;
+  overflow-x: hidden;
+}
