@@ -50,9 +50,8 @@ p {
   }
 }
 
-form {
-  margin-left: 5rem;
-  width: 50%;
+body {
+  color: #707070;
 }
 
 .entete {
@@ -60,6 +59,10 @@ form {
   border-left: 0.50rem solid;
   border-color: #86A9E6;
   padding: 1rem;
+}
+
+.container-info {
+  width: 55%;
 }
 
 .containerCordonnees {
@@ -73,17 +76,22 @@ form {
 #name {
   border: none;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #jobtitle {
   border: none;
   background-color: #fff;
   margin-top: 5%;
+  width: 25%;
 }
 
 label {
   margin: 0.5rem;
+}
+
+b, h4 {
+  font-family: "Open Sans";
 }
 
 #btn__boutonMaj {

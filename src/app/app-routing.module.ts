@@ -20,6 +20,7 @@ import { AjoutEntrepriseComponent } from './ajout-entreprise/ajout-entreprise.co
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MajEntrepriseComponent } from './maj-entreprise/maj-entreprise.component';
+import { TableauBordComponent } from './tableau-bord/tableau-bord.component';
 
 const childrenRoutes: Routes = [
   { path: 'ajoutDemande', component: AjoutDemandeStageComponent},
@@ -39,8 +40,7 @@ const childrenRoutes: Routes = [
   { path: 'offre/:_id', component: OffreDetailComponent},
   { path: 'maj-offre/:_id', component: MajOffreStageComponent},
   { path: 'ajout-offre', component: AjoutOffreStageComponent},
-
-  
+  { path: 'tableauBord', component: TableauBordComponent}  
 ];
 
 const routes: Routes = [
